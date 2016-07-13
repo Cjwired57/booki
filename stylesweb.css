@@ -1,19 +1,17 @@
 body {
  /*max-width:960px; */
-  margin-left:auto;
-  margin-right: auto;
+/*  margin-left:auto;
+  margin-right: auto;*/
 }
 
 
 figure {
 
- display: inline-block;
- margin-top: -30px;
- margin-left: 0;
- margin-right: 0;
- width: 15%;
- padding: 3%;
- height: 70%;
+/* display: inline-block;
+
+ width: 25%;
+ padding: 3%;*/
+
 }
 
 .teamtext {
@@ -21,16 +19,17 @@ figure {
 
 }
 
+
+
 main {
   margin-top: 90px ;
   color: #FFFFFF;
   background: #36465D;
-  display:inline-block;
-  width: 100%;
+
+
   vertical-align:text-top;
-  padding-left:.9em;
-  margin-left: auto;
-    margin-right: auto;
+
+
 
 }
 
@@ -47,17 +46,16 @@ main {
   margin-right: auto;
 }
 
-.teams {
-   border-radius: 5px;
+/*.teams {
+  border-radius: 5px;
   color: #FFFFFF;
   background: #529FCD;
   display:inline-block;
-  width: 94%;
   vertical-align:text-top;
   padding-left:.9em;
   margin-left: auto;
   margin-right: auto;
-}
+}*/
 
 
 .button {
@@ -67,7 +65,10 @@ main {
 
 }
 
+.teampics {
+width: 200px;
 
+}
 /*
 @media screen and (max-width: 700px) {
   body {
