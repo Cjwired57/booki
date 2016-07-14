@@ -1,0 +1,89 @@
+body {
+ /*max-width:960px; */
+  width: 70%;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+
+figure {
+
+ display: inline-block;
+ margin-top: -30px;
+ margin-left: 0;
+ margin-right: 0;
+ width: 15%;
+ padding: 3%;
+ height: 70%;
+}
+
+.teamtext {
+  border-bottom: 1px solid #FFFFFF;
+
+}
+
+main {
+  height: 350px;
+   border-radius: 5px;
+  color: #FFFFFF;
+  background: #36465D;
+  border: 1px solid black;
+  display:inline-block;
+  width: 45%;
+  vertical-align:text-top;
+  padding-left:.9em;
+  margin-left: auto;
+    margin-right: auto;
+
+}
+
+.baseball {
+  height: 350px;
+   border-radius: 5px;
+   color: #0E8DE3;
+    background: #F3F9FE;
+  display:inline-block;
+  width: 45%;
+  vertical-align:text-top;
+  padding-left:.9em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teams {
+   border-radius: 5px;
+  color: #FFFFFF;
+  background: #529FCD;
+  display:inline-block;
+  width: 94%;
+  vertical-align:text-top;
+  padding-left:.9em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.button {
+  border-radius: 5px;
+  border: 1px solid #56BC8A;
+  background: #86909E;
+
+}
+
+
+/*
+@media screen and (max-width: 700px) {
+  body {
+    font-size: .5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }*/
+
+
+}
