@@ -22,13 +22,12 @@ figure {
 
 
 main {
-  margin-top: 90px ;
-  color: #FFFFFF;
-  background: #36465D;
-
-
-  vertical-align:text-top;
-
+  color: white;
+  margin-top: 200px ;
+  width:400px;
+  margin-left:auto;
+  margin-right: auto;
+  height: 200px;
 
 
 }
