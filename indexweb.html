@@ -4,16 +4,14 @@
   <title>Bookie</title>
   <link rel="stylesheet" href="stylesweb.css" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="backstretch.js"></script>
 
   <style>
-body {
-   color: #FFFFFF;
-  background: #36465D;
-}
+
 </style>
 
 </head>
@@ -21,21 +19,6 @@ body {
 
 
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-
-  <ul class="list nav navbar-nav">
-
-      <li><a href="/">Home</a></li>
-   <!--    <li><a href="/logout">Logout</a></li>
-      <li><a href="/newest">Teams</a></li> -->
-
-      <li><a href="/register">Register</a></li>
-      <li><a class="login" href="/login">Login to Paypal</a></li>
-      <li><a class="login" href="teams.html">Teams</a></li>
-  </ul>
-  </div>
-</nav>
 
 
 
@@ -52,6 +35,14 @@ body {
 
 
 
-
+<script>
+$.backstretch([
+      "http://8328-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2013/05/golden-state-warriors-playoffs-denver-nuggets.jpg",
+      // "http://wpmedia.news.nationalpost.com/2015/02/462638212.jpg",
+      "http://www.hdwallpapersact.com/wp-content/gallery/cricket-stadium/lovely-sky-view-of-stadium-at-night.jpg",
+      "http://static.nfl.com/static/content/public/pg-photo/2015/07/03/0ap3000000500076/gillette-stadium_pg_600.jpg",
+       "http://ww3.hdnux.com/photos/36/72/01/8101998/3/rawImage.jpg"
+  ], {duration: 3000, fade: 750});
+</script>
 </body>
 </html>
