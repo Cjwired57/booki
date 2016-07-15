@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
   <script type="text/javascript">
   Stripe.setPublishableKey('pk_test_NMNJU6laUHjXTR0GXl1Mhknk');
@@ -32,13 +32,13 @@ body {
 
 
     <li><a href="/logout">Logout</a></li>
-      <li><a href="/teams.html">Teams</a></li>
+      <li><a href="/teams.html">teams</a></li>
   </ul>
   </div>
 </nav>
 
 
-<h1 style="margin-top: 90px; text-align: center;">Teams</h1>
+<h1 style="margin-top: 90px; text-align: center;">Payment Credentials</h1>
 
 
 <div class="container-fluid">
@@ -93,6 +93,32 @@ body {
     return false;
   });
 });
+</script>
+
+<!-- handler that handles token and more stuff sent back from stripe server -->
+<script>
+  function stripeResponseHandler(status, response) {
+  // Grab the form:
+  var $form = $('#payment-form');
+
+  if (response.error) { // Problem!
+
+    // Show the errors on the form:
+    $form.find('.payment-errors').text(response.error.message);
+    $form.find('.submit').prop('disabled', false); // Re-enable submission
+
+  } else { // Token was created!
+
+    // Get the token ID:
+    var token = response.id;
+
+    // Insert the token ID into the form so it gets submitted to the server:
+    $form.append($('<input type="hidden" name="stripeToken">').val(token));
+
+    // Submit the form:
+    $form.get(0).submit();
+  }
+};
 </script>
 </body>
 </html>
