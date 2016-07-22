@@ -7,8 +7,9 @@ class UserController < ApplicationController
   def create
     @user = User.new(email: params[:email])
     @user.password=params[:password]
-
     @user.save
+
+    session[:current_user_id] = @user.id
     redirect_to root_path
   end
 

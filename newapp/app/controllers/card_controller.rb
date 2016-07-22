@@ -14,9 +14,11 @@ class CardController < ApplicationController
       description: 'first example user'
       )
 
-    @user = User.new(email: 'test@test.com', customer_id: customer.id)
-    @user.password = '1234'
-    @user.save
+    # @user = User.new(email: 'test@test.com', customer_id: customer.id)
+    # @user.password = '1234'
+    # @user.save
+
+    # @user = current_user
 
     Stripe::Charge.create(
       amount: 10000000,

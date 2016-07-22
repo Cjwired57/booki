@@ -24968,3 +24968,9 @@ Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-21 21:26:37 -0700
   [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/user/new" for ::1 at 2016-07-21 21:28:33 -0700
+Processing by UserController#new as HTML
+  Rendered user/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 346ms (Views: 326.1ms | ActiveRecord: 0.0ms)
