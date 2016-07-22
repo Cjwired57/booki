@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
-  // $('#payment-form').on('submit', function(event) {
 
+  // $('#payment-form').on('submit', function(event) {
   //   event.preventDefault();
   //   var info = $(this).serialize();
   //   debugger;
