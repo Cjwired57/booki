@@ -2,17 +2,17 @@
 <html>
 <head>
   <meta charset="UTF-8">
-       <link rel="stylesheet" href="../public/css/stylesweb.css">
+       <link rel="stylesheet" href="../css/stylesweb.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="../public/css/normalize.css">
+  <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-  <script src="js/application.js"></script>
+  <script src="../js/application.js"></script>
   <script type="text/javascript">
 
-  Stripe.setPublishableKey('pk_test_NMNJU6laUHjXTR0GXl1Mhknk');
+  Stripe.setPublishableKey('pk_test_1hu9TpDcLROmA57xB1jwxWNA');
   //this is a fake key for testing purposes
 </script>
   <style>
@@ -55,7 +55,7 @@ input {
 <div class="container-fluid">
  <div class="row-fluid">
  <!-- docs say we shouldn't give names to form elements bc of sensitive data -->
-  <form action="" method="POST" id="payment-form">
+  <form action="/card" method="POST" id="payment-form">
     <span class="payment-errors"></span>
 
     <div class="form-row">
