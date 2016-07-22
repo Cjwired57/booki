@@ -1,4 +1,8 @@
+  require "stripe"
+
 class CardController < ApplicationController
+  Stripe.api_key = "sk_test_LaGOwlDvqeTDlyYRBnWN1y4W"
+
   def index
   end
 
@@ -10,10 +14,12 @@ class CardController < ApplicationController
       description: 'first example user'
       )
 
-    # Stripe::Charge.create(
-    #   amount: 1000,
-    #   currency: 'usd',
-    #   customer: customer.id)
+    @user = User.create(email: 'test@test.com', password_hash: '1234', customer_id: customer.id)
+
+    Stripe::Charge.create(
+      amount: 10000000,
+      currency: 'usd',
+      customer: @user.customer_id)
 
     redirect_to root_path
   end
