@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'stattleship-ruby'
 gem 'bcrypt'
 gem 'stripe'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
