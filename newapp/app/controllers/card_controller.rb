@@ -1,4 +1,4 @@
-  require "stripe"
+require "stripe"
 
 class CardController < ApplicationController
   Stripe.api_key = "sk_test_LaGOwlDvqeTDlyYRBnWN1y4W"
@@ -14,7 +14,9 @@ class CardController < ApplicationController
       description: 'first example user'
       )
 
-    @user = User.create(email: 'test@test.com', password_hash: '1234', customer_id: customer.id)
+    @user = User.new(email: 'test@test.com', customer_id: customer.id)
+    @user.password = '1234'
+    @user.save
 
     Stripe::Charge.create(
       amount: 10000000,
