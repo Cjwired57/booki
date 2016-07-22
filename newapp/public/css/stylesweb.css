@@ -19,8 +19,14 @@ strong {
    color: white;
 
 }
+.movenav {
+top: 0;
+}
 
-
+.auth {
+  color: #DEEDF9;
+  margin-top: -20px;
+}
 
 .teamtext {
   border-bottom: 1px solid #FFFFFF;
