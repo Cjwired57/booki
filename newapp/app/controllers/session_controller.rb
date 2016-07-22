@@ -9,7 +9,8 @@ class SessionController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/'
+      flash[:danger] = "Invalid email or password"
+      redirect_to '/session/new'
     end
   end
 
