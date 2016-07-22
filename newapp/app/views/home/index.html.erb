@@ -10,6 +10,7 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="js/backstretch.js"></script>
+  <script src="js/application.js"></script>
 
 <style>
   body {
@@ -32,7 +33,7 @@
       <strong>BOOKi</strong>
       <h2 class="headline">Place wagers on the latest sporting events</h2>
       <br>
-
+     <div class="button"><%= link_to 'New User', new_user_path %> </div>
      <div class="button"><%= link_to 'Credit Card Info', card_index_path %> </div> <br>
 
   </main>
@@ -48,10 +49,6 @@ $.backstretch([
       "http://static.nfl.com/static/content/public/pg-photo/2015/07/03/0ap3000000500076/gillette-stadium_pg_600.jpg",
        "http://ww3.hdnux.com/photos/36/72/01/8101998/3/rawImage.jpg"
   ], {duration: 2000, fade: 1500});
-
-
-
-
 </script>
 </body>
 </html>
