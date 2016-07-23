@@ -8,7 +8,8 @@ class CardController < ApplicationController
 
   def create
     token = params[:stripeToken]
-
+    p token
+    p "****"*50
     customer = Stripe::Customer.create(
       source: token,
       description: 'first example user'
@@ -22,7 +23,10 @@ class CardController < ApplicationController
      @user.customer_id = customer.id
      @user.save
 
+      p @user
+      p "****"*50
     Stripe::Charge.create(
+
       amount: 100,
       currency: 'usd',
       customer: @user.customer_id)
