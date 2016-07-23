@@ -18,10 +18,12 @@ class CardController < ApplicationController
     # @user.password = '1234'
     # @user.save
 
-    # @user = current_user
+     @user = current_user
+     @user.customer_id = customer.id
+     @user.save
 
     Stripe::Charge.create(
-      amount: 10000000,
+      amount: 100,
       currency: 'usd',
       customer: @user.customer_id)
 
