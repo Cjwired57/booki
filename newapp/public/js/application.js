@@ -27,8 +27,8 @@ function stripeResponseHandler(status, response) {
   // Grab the form:
   var $form = $('#payment-form');
 
-  if (response.error) { // Problem!
-
+    if (response.error) { // Problem!
+    console.log("wtf")
     // Show the errors on the form:
     $form.find('.payment-errors').text(response.error.message);
     $form.find('.submit').prop('disabled', false); // Re-enable submission

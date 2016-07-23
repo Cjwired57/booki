@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'card/index'
+  # get 'card/index'
   get 'home/teams'
   get 'home/index'
 
