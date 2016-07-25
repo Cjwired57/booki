@@ -21,6 +21,11 @@
 
 </head>
 <body>
+<input type="hidden" id="refresh" value="no">
+<script>
+  var $input = $('#refresh');
+  $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+</script>
 
 
 <nav class="navbar navbar-default navbar-fixed-top">
