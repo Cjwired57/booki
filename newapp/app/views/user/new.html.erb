@@ -1,0 +1,24 @@
+ <h1>Signup!</h1>
+<!--   <div id='new-user-form-wrapper'>
+    <form id='new-user-form' action='/user' method='POST'>
+    <label>Email: </label>
+    <input type='text' name='email'></input>
+    <label>Password: </label>
+    <input type='password' name='password'></input>
+    <input type='submit'>
+    </form>
+  </div> -->
+
+ <% if flash[:danger] %>
+    <div><%= flash[:danger] %></div>
+  <% end %>
+
+ <%= form_for :user, url: '/user' do |f| %>
+
+
+  Email: <%= f.text_field :email %>
+  Password: <%= f.password_field :password %>
+
+  <%= f.submit "Submit" %>
+
+<% end %>
