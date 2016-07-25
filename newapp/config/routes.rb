@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
-  get 'card/index'
+  # get 'card/index'
   get 'home/teams'
   get 'home/index'
 
+  # get '/login' => 'sessions#new'
+  # post '/login' => 'sessions#create'
+  # get '/logout' => 'sessions#destroy'
+  delete 'session' => 'session#destroy'
+
+  resources :game
+  resources :session
   resources :user
   resources :card
   # The priority is based upon order of creation: first created -> highest priority.
