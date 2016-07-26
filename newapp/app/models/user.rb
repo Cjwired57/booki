@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   include BCrypt
-  validates :email, presence: true
+  validates :email, :password, presence: true
+  validates :email, uniqueness: true
   # def password
   #   @password ||= Password.new(password_hash)
   # end
@@ -9,6 +10,7 @@ class User < ActiveRecord::Base
   #   @password = Password.create(new_password)
   #   self.password_hash = @password
   # end
+  has_one :managed_account
   has_many :requests_as_owner, class_name: 'Request', foreign_key: :owner_id
   has_many :requests_as_opponent, class_name: 'Request', foreign_key: :opponent_id
   has_many :bets_as_owner, through: :requests_as_owner, source: :bet

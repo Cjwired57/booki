@@ -15,8 +15,7 @@ class UserController < ApplicationController
   def create
     p "*****"*50
     user = User.new(user_params)
-    p user
-    p "*****"*50
+
     if user.save
       flash[:success] = "registration successful"
       session[:user_id] = user.id
