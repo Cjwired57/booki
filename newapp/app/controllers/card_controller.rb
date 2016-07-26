@@ -25,11 +25,11 @@ class CardController < ApplicationController
 
       p @user
       p "****"*50
-    Stripe::Charge.create(
+    # Stripe::Charge.create(
 
-      amount: 100,
-      currency: 'usd',
-      customer: @user.customer_id)
+    #   amount: 100,
+    #   currency: 'usd',
+    #   customer: @user.customer_id)
 
     redirect_to root_path
   end
