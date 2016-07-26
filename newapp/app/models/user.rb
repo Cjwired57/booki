@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   #   @password = Password.create(new_password)
   #   self.password_hash = @password
   # end
-
+  has_many :bets, through: :requests
+  has_many :requests
   has_secure_password
 end
