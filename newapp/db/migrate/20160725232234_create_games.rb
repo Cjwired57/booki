@@ -4,9 +4,9 @@ class CreateGames < ActiveRecord::Migration
       t.string :label
       t.string :full_name
 
-      t.string :home_team
-      t.string :away_team
-      t.string :winning_team
+      t.integer :home_team_id
+      t.integer :away_team_id
+      t.integer :winning_team_id
       t.integer :home_team_score
       t.integer :away_team_score
       t.integer :spread
