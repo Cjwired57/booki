@@ -25,8 +25,6 @@
 <script>
   var $input = $('#refresh');
   $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
-
-
 </script>
 
   <main>
@@ -34,8 +32,129 @@
          <% if current_user %>
       <div class="headline auth"> Signed in as <%= current_user.email %> |  <%= link_to "Log out", session_path, :method => :delete %> </div>
       <% else %>
-      <div class="headline auth"><%= link_to 'Login', '/session/new' %> | <%= link_to 'Signup', '/user/new' %> </div>
+      <div class="headline auth"><%= link_to 'Login',  '/session/new', data: {toggle: "modal", target: "#test-modal"} %> |
+          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#test-modal">Sign Up</button>
+     <!--  <%= link_to 'Signup', '/user/new', data: {toggle: "modal", target: "#test-modal"}  %> --> </div>
       <% end %>
+
+          <!-- Button trigger modal -->
+
+
+
+
+
+
+    <div class="modal fade" id="test-modal" data-modal-index="1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Sign Up</h4>
+      </div>
+      <div class="modal-body">
+       <%= form_for :user, url: '/user' do |f| %>
+          Email: <%= f.text_field :email %>
+          Password: <%= f.password_field :password %>
+          <%= f.submit "Submit" %>
+        <% end %>
+             <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Next</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+    <div class="modal fade" id="test-modal-2" data-modal-index="2">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Enter CC number</h4>
+      </div>
+      <div class="modal-body">
+        <%= form_for :user, url: '/user' do |f| %>
+          Credit Card: <%= f.text_field :credit_card %>
+
+          <%= f.submit "Submit" %>
+        <% end %>
+        <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-3">Next</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+    <div class="modal fade" id="test-modal-3">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Debit Card</h4>
+        <h5>Debit card for recieving winnings</h5>
+      </div>
+      <div class="modal-body">
+           <%= form_for :user, url: '/user' do |f| %>
+          Debit Card: <%= f.text_field :debit_card %>
+
+          <%= f.submit "Submit" %>
+        <% end %>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
 
       </div> <br> <br>
 
