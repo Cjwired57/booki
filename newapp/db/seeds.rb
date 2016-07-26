@@ -1,14 +1,29 @@
 require 'stattleship'
 require 'pp'
+require 'stripe'
 
+  Stripe.api_key = "sk_test_LaGOwlDvqeTDlyYRBnWN1y4W"
 
 Game.delete_all
 User.delete_all
 
-User.create(email: 'tim@tim.com', password: 'timtim')
-User.create(email: 'tom@tom.com', password: 'tomtom')
-# u.password = 'timtim'
-# u.save
+u = User.create(email: 'tim@tim.com', password: 'timtim')
+# User.create(email: 'tom@tom.com', password: 'tomtom')
+
+acct = Stripe::Account.create(
+  {
+    :country => "US",
+    :managed => true
+  }
+)
+
+
+account_id = acct.id
+s_key = acct.keys.secret
+p_key = acct.keys.publishable
+
+# u.account_id = account_id
+ManagedAccount.create(user_id: u.id, account_id: account_id, secret_key: s_key, publishable_key: p_key )
 
 Stattleship.configure do |config|
       config.api_token = '5faa60b51939bb1b58b5cc0594a2b12b'
