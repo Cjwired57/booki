@@ -7481,3 +7481,15 @@ Migrating to CreateGames (20160725232234)
   [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Diamondbacks vs Reds July 24, 2016 at  1:10pm"]]
   [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Mariners vs Blue Jays July 24, 2016 at  1:07pm"]]
   [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Giants vs Yankees July 24, 2016 at  1:05pm"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRequests (20160726001659)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "owner_id" integer, "opponent_id" integer, "game_id" integer, "accepted" boolean, "bet_amount" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160726001659"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBets (20160726002151)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "bets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "request_id" integer, "winner_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160726002151"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
