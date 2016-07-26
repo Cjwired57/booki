@@ -52,9 +52,10 @@
         <h4 class="modal-title">Sign Up</h4>
       </div>
       <div class="modal-body">
-       <%= form_for :user, url: '/user' do |f| %>
+       <%= form_for :user, url: '/user', :html => {:id => "my_sign_up_form"} do |f| %>
           Email: <%= f.text_field :email %>
           Password: <%= f.password_field :password %>
+
           <%= f.submit "Submit" %>
         <% end %>
              <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Next</button>
@@ -103,9 +104,9 @@
            <%= form_for :user, url: '/user' do |f| %>
           Debit Card: <%= f.text_field :debit_card %>
 
-          <%= f.submit "Submit" %>
+         <%= f.submit "Submit" %>
         <% end %>
-
+        <input type="submit" value="Submit" form="my_sign_up_form">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
