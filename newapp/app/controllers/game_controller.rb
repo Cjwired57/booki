@@ -41,6 +41,35 @@ if games.length > 0
     pp game.scoreline
   end
 end
+
+  p '*'*50
+# Construct params for the fetch
+query_params = Stattleship::Params::BaseballGamesParams.new
+
+# use a slug, typically 'league-team_abbreviation'
+# query_params.team_id = 'mlb-bos'
+
+# may need to adjust this depending on time of year
+query_params.season_id = 'mlb-2016'
+# query_params.status = 'upcoming'
+query_params.on = 'yesterday'
+
+# fetch will automatically traverse the paginated response links
+games = Stattleship::BaseballGames.fetch(params: query_params)
+
+if games.length > 0
+  # the populated object
+  pp games.first
+
+  # can access friendly helpers
+  pp games.first.started_at.strftime('%b %e, %l:%M %p')
+
+  # or, individual attributes
+  games.each do |game|
+    pp game.scoreline
+  end
+end
+
 redirect_to root_path
 end
 
