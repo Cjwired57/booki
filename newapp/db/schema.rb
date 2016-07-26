@@ -11,7 +11,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722000736) do
+ActiveRecord::Schema.define(version: 20160726002151) do
+
+  create_table "bets", force: :cascade do |t|
+    t.integer  "request_id"
+    t.integer  "winner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string   "label"
+    t.string   "full_name"
+    t.string   "home_team"
+    t.string   "away_team"
+    t.string   "winning_team"
+    t.integer  "home_team_score"
+    t.integer  "away_team_score"
+    t.integer  "spread"
+    t.datetime "start_time"
+    t.boolean  "finished",        default: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.integer  "owner_id"
+    t.integer  "opponent_id"
+    t.integer  "game_id"
+    t.boolean  "accepted"
+    t.float    "bet_amount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
