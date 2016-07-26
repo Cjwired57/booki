@@ -2,7 +2,7 @@ require 'stattleship'
 
 class GameController < ApplicationController
   def index
-
+    @games = Game.all
   end
 
   def create

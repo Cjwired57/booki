@@ -2,7 +2,13 @@ require 'stattleship'
 require 'pp'
 
 
-# Game.delete_all
+Game.delete_all
+User.delete_all
+
+User.create(email: 'tim@tim.com', password: 'timtim')
+User.create(email: 'tom@tom.com', password: 'tomtom')
+# u.password = 'timtim'
+# u.save
 
 Stattleship.configure do |config|
       config.api_token = '5faa60b51939bb1b58b5cc0594a2b12b'
@@ -35,8 +41,8 @@ if games.length > 0
     Game.create(
       label: game.label,
       full_name: game.name,
-      home_team: "#{game.home_team.name} #{game.home_team.nickname}",
-      away_team: "#{game.away_team.name} #{game.away_team.nickname}",
+      home_team: "#{game.home_team.location} #{game.home_team.nickname}",
+      away_team: "#{game.away_team.location} #{game.away_team.nickname}",
       start_time: game.started_at
       )
   end
@@ -72,7 +78,7 @@ if games.length > 0
         home_team_score: game.home_team_score,
         away_team_score: game.away_team_score,
         finished: true,
-        winning_team: "#{game.winning_team.name} #{game.winning_team.nickname}"
+        winning_team: "#{game.winning_team.location} #{game.winning_team.nickname}"
         )
     end
   end
