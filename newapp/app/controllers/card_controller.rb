@@ -7,7 +7,9 @@ class CardController < ApplicationController
   end
 
   def create
-    token = params[:stripeToken]
+    if request.xhr?
+      p params
+    token = params[:token]
     p token
     p "****"*50
     customer = Stripe::Customer.create(
@@ -25,6 +27,10 @@ class CardController < ApplicationController
 
       p @user
       p "****"*50
+
+      return "cool"
+    else
+
     # Stripe::Charge.create(
 
     #   amount: 100,
@@ -33,4 +39,5 @@ class CardController < ApplicationController
 
     redirect_to root_path
   end
+end
 end
