@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
+<script type="text/javascript">
+  Stripe.setPublishableKey('pk_test_1hu9TpDcLROmA57xB1jwxWNA');
+  //this is a fake key for testing purposes
+</script>
 
-  <script src="js/application.js"></script>
+<script src="js/application.js"></script>
 
 <style>
   body {
@@ -37,89 +41,11 @@
      <!--  <%= link_to 'Signup', '/user/new', data: {toggle: "modal", target: "#test-modal"}  %> --> </div>
       <% end %>
 
-          <!-- Button trigger modal -->
 
 
 
 
-
-
-    <div class="modal fade" id="test-modal" data-modal-index="1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Sign Up</h4>
-      </div>
-      <div class="modal-body">
-       <%= form_for :user, url: '/user', :html => {:id => "my_sign_up_form"} do |f| %>
-          Email: <%= f.text_field :email %>
-          Password: <%= f.password_field :password %>
-
-          <%= f.submit "Submit" %>
-        <% end %>
-             <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Next</button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-    <div class="modal fade" id="test-modal-2" data-modal-index="2">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Enter CC number</h4>
-      </div>
-      <div class="modal-body">
-        <%= form_for :user, url: '/user' do |f| %>
-          Credit Card: <%= f.text_field :credit_card %>
-
-          <%= f.submit "Submit" %>
-        <% end %>
-        <button class="btn btn-default" data-toggle="modal" data-target="#test-modal-3">Next</button>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-    <div class="modal fade" id="test-modal-3">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Debit Card</h4>
-        <h5>Debit card for recieving winnings</h5>
-      </div>
-      <div class="modal-body">
-           <%= form_for :user, url: '/user' do |f| %>
-          Debit Card: <%= f.text_field :debit_card %>
-
-         <%= f.submit "Submit" %>
-        <% end %>
-        <input type="submit" value="Submit" form="my_sign_up_form">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
-
-
+<%= render 'modal' %>
 
 
 
