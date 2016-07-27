@@ -25,6 +25,9 @@
 
 </head>
 <body>
+
+
+
 <input type="hidden" id="refresh" value="no">
 <script>
   var $input = $('#refresh');
@@ -41,6 +44,9 @@
      <!--  <%= link_to 'Signup', '/user/new', data: {toggle: "modal", target: "#test-modal"}  %> --> </div>
       <% end %>
 
+       <% if flash[:danger] %>
+        <div style="color: white;"><%= flash[:danger] %></div>
+       <% end %>
 
 <%= render 'modal' %>
 
