@@ -9,21 +9,17 @@ class CardController < ApplicationController
   def create
     if request.xhr?
       p params
-    token = params[:token]
-    p token
-    p "****"*50
-    customer = Stripe::Customer.create(
-      source: token,
-      description: 'first example user'
-      )
+      token = params[:token]
+      p token
+      p "****"*50
+      customer = Stripe::Customer.create(
+        source: token,
+        description: 'first example user'
+        )
 
-    # @user = User.new(email: 'test@test.com', customer_id: customer.id)
-    # @user.password = '1234'
-    # @user.save
-
-     @user = current_user
-     @user.customer_id = customer.id
-     @user.save
+      @user = current_user
+      @user.customer_id = customer.id
+      @user.save
 
       p @user
       p "****"*50
@@ -37,7 +33,7 @@ class CardController < ApplicationController
     #   currency: 'usd',
     #   customer: @user.customer_id)
 
-    redirect_to root_path
-  end
+redirect_to root_path
 end
+
 end
