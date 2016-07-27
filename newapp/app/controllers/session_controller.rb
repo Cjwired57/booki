@@ -10,7 +10,7 @@ class SessionController < ApplicationController
       redirect_to '/'
     else
       flash[:danger] = "Invalid email or password"
-      redirect_to '/session/new'
+      redirect_to '/'
     end
   end
 
