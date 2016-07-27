@@ -4,7 +4,7 @@ require 'stripe'
 
 Stripe.api_key = "sk_test_LaGOwlDvqeTDlyYRBnWN1y4W"
 
-# Game.delete_all
+Game.delete_all
 User.delete_all
 Team.delete_all
 #team seeds
@@ -278,11 +278,12 @@ if games.length > 0
     pp game.scoreline
     g = Game.find_by(full_name: game.name)
     if g
+      winning_team = Team.find_by(name: game.winning_team.nickname)
       g.update(
         home_team_score: game.home_team_score,
         away_team_score: game.away_team_score,
         finished: true,
-        winning_team: "#{game.winning_team.location} #{game.winning_team.nickname}"
+        winning_team_id: winning_team.id
         )
     else
       # h =  game.home_team.location.split.map(&:capitalize).join(' ')
