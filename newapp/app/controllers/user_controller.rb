@@ -13,17 +13,30 @@ class UserController < ApplicationController
   end
 
   def create
-    p "*****"*50
-    user = User.new(user_params)
 
-    if user.save
-      flash[:success] = "registration successful"
-      session[:user_id] = user.id
-      redirect_to root_path
-    else
+    if request.xhr?
+      user = User.new(user_params)
+      if user.save
+        session[:user_id] = user.id
+      else
        flash[:danger] = "Please enter a valid email and or password"
-      redirect_to '/user/new'
-    end
+        redirect_to root_path
+      end
+    else
+      p "*****"*50
+      user = User.new(user_params)
+      p user
+      p "*****"*50
+      if user.save
+        flash[:success] = "registration successful"
+        session[:user_id] = user.id
+
+          redirect_to root_path
+      else
+         flash[:danger] = "Please enter a valid email and or password"
+        redirect_to '/user/new'
+      end
+  end
   end
 
 

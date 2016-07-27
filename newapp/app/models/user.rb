@@ -17,6 +17,10 @@ class User < ActiveRecord::Base
   has_many :bets_as_opponent, through: :requests_as_opponent, source: :bet
   has_secure_password
 
+  def requests
+
+  end
+
   def bets
     output = []
     self.bets_as_owner.each do |bet|
@@ -37,6 +41,21 @@ class User < ActiveRecord::Base
       end
     end
     total
+  end
+
+  def bets_won
+    # won_bets = []
+    # self.bets.each do |bet|
+
+    # end
+  end
+
+  def bets_lost
+
+  end
+
+  def current_bets
+
   end
 
 
