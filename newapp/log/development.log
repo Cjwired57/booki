@@ -24297,3 +24297,153 @@ Processing by CardController#create as */*
   [1m[35m (1.6ms)[0m  commit transaction
   Rendered card/create.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 670ms (Views: 28.8ms | ActiveRecord: 2.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTeams (20160726232959)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (219.2ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "city" varchar, "logo_url" varchar, "stadium" varchar, "founded_in" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160726232959"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "games"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tim@tim.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "tim@tim.com"], ["password_digest", "$2a$10$UOvULiJyZ9Lc2AGrucjxQuFBWU2CYC7mtbYExzVAHfK2Ozd5JLNGS"], ["created_at", "2016-07-27 02:16:58.244066"], ["updated_at", "2016-07-27 02:16:58.244066"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "managed_accounts" ("user_id", "account_id", "secret_key", "publishable_key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 7], ["account_id", "acct_18bhbSFcWxjwUmQm"], ["secret_key", "sk_test_hSRAO4erj3CgfInvnnonq5gf"], ["publishable_key", "pk_test_PvUUpmUSYrImeoNEFviyNwxf"], ["created_at", "2016-07-27 02:17:00.746694"], ["updated_at", "2016-07-27 02:17:00.746694"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36mGame Load (2.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Reds vs Giants July 25, 2016 at  7:15pm"]]
+  [1m[35mGame Load (0.6ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Angels vs Royals July 25, 2016 at  7:15pm"]]
+  [1m[36mGame Load (0.9ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Cubs vs White Sox July 25, 2016 at  7:10pm"]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Yankees vs Astros July 25, 2016 at  7:10pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Athletics vs Rangers July 25, 2016 at  7:05pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Diamondbacks vs Brewers July 25, 2016 at  6:20pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Tigers vs Red Sox July 25, 2016 at  7:10pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Phillies vs Marlins July 25, 2016 at  7:10pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Padres vs Blue Jays July 25, 2016 at  7:07pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Rockies vs Orioles July 25, 2016 at  7:05pm"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (11.7ms)[0m  DELETE FROM "games"
+  [1m[36mSQL (1.6ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tim@tim.com' LIMIT 1[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "tim@tim.com"], ["password_digest", "$2a$10$VlNGqWRL1ErpkrDK4VCWUux27oPgBUQZv6CAPwIuAZITrG7mggZ5e"], ["created_at", "2016-07-27 02:18:11.545361"], ["updated_at", "2016-07-27 02:18:11.545361"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "managed_accounts" ("user_id", "account_id", "secret_key", "publishable_key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 8], ["account_id", "acct_18bhcdD202rtFJqi"], ["secret_key", "sk_test_USkFwJMWVHK5bbG74Yk1H7rr"], ["publishable_key", "pk_test_ko18PvqV7zCm3nigqUqFpnCB"], ["created_at", "2016-07-27 02:18:13.574339"], ["updated_at", "2016-07-27 02:18:13.574339"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Reds vs Giants July 25, 2016 at  7:15pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Angels vs Royals July 25, 2016 at  7:15pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Cubs vs White Sox July 25, 2016 at  7:10pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Yankees vs Astros July 25, 2016 at  7:10pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Athletics vs Rangers July 25, 2016 at  7:05pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Diamondbacks vs Brewers July 25, 2016 at  6:20pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Tigers vs Red Sox July 25, 2016 at  7:10pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Phillies vs Marlins July 25, 2016 at  7:10pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Padres vs Blue Jays July 25, 2016 at  7:07pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Rockies vs Orioles July 25, 2016 at  7:05pm"]]
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Diamondbacks"], ["city", "Arizona"], ["logo_url", "../public/images/arizona-diamondbacks.png"], ["stadium", "Chase Field"], ["created_at", "2016-07-27 02:18:15.297913"], ["updated_at", "2016-07-27 02:18:15.297913"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Red Sox"], ["city", "Boston"], ["logo_url", "../public/images/boston-redsox.png"], ["stadium", "Fenway Park"], ["created_at", "2016-07-27 02:18:15.307798"], ["updated_at", "2016-07-27 02:18:15.307798"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Orioles"], ["city", "Baltimore"], ["logo_url", "../public/images/baltimore-orioles.png"], ["stadium", "Oriole Park"], ["created_at", "2016-07-27 02:18:15.317511"], ["updated_at", "2016-07-27 02:18:15.317511"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "White Sox"], ["city", "Chicago"], ["logo_url", "../public/images/chicago-whitesox.png"], ["stadium", "U.S. Cellular Field"], ["created_at", "2016-07-27 02:18:15.327037"], ["updated_at", "2016-07-27 02:18:15.327037"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Cubs"], ["city", "Chicago"], ["logo_url", "../public/images/chicago-cubs.png"], ["stadium", "Wrigley Field"], ["created_at", "2016-07-27 02:18:15.336846"], ["updated_at", "2016-07-27 02:18:15.336846"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Indians"], ["city", "Cleveland"], ["logo_url", "../public/images/cleveland-indians.png"], ["stadium", "Progressive Field"], ["created_at", "2016-07-27 02:18:15.339786"], ["updated_at", "2016-07-27 02:18:15.339786"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Reds"], ["city", "Cincinatti"], ["logo_url", "../public/images/cincinatti-reds.png"], ["stadium", "Great American Ball Park"], ["created_at", "2016-07-27 02:18:15.342873"], ["updated_at", "2016-07-27 02:18:15.342873"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tigers"], ["city", "Detroit"], ["logo_url", "../public/images/detroit-tigers.png"], ["stadium", "Comerica Park"], ["created_at", "2016-07-27 02:18:15.346285"], ["updated_at", "2016-07-27 02:18:15.346285"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Rockies"], ["city", "Colorado"], ["logo_url", "../public/images/colorado-rockies.png"], ["stadium", "Coors Field"], ["created_at", "2016-07-27 02:18:15.350615"], ["updated_at", "2016-07-27 02:18:15.350615"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Astros"], ["city", "Houston"], ["logo_url", "../public/images/houston-astros.png"], ["stadium", "Minute Maid Park"], ["created_at", "2016-07-27 02:18:15.361872"], ["updated_at", "2016-07-27 02:18:15.361872"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Dodgers"], ["city", "Los Angeles"], ["logo_url", "../public/images/losangeles-dodgers.png"], ["stadium", "Dodger Stadium"], ["created_at", "2016-07-27 02:18:15.368434"], ["updated_at", "2016-07-27 02:18:15.368434"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Royals"], ["city", "Kansas City"], ["logo_url", "../public/images/kansascity-royals.png"], ["stadium", "Kauffman Stadium"], ["created_at", "2016-07-27 02:18:15.371282"], ["updated_at", "2016-07-27 02:18:15.371282"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Marlins"], ["city", "Miami"], ["logo_url", "../public/images/miami-marlins.png"], ["stadium", "Marlins Park"], ["created_at", "2016-07-27 02:18:15.375100"], ["updated_at", "2016-07-27 02:18:15.375100"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Angels"], ["city", "Los Angeles"], ["logo_url", "../public/images/losangeles-angels.png"], ["stadium", "Angel Stadium"], ["created_at", "2016-07-27 02:18:15.378661"], ["updated_at", "2016-07-27 02:18:15.378661"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Brewers"], ["city", "Milwaukee"], ["logo_url", "../public/images/milwaukee-brewers.png"], ["stadium", "Miller Park"], ["created_at", "2016-07-27 02:18:15.383504"], ["updated_at", "2016-07-27 02:18:15.383504"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Twins"], ["city", "Minnesota"], ["logo_url", "../public/images/minnesota-twins.png"], ["stadium", "Target Field"], ["created_at", "2016-07-27 02:18:15.392531"], ["updated_at", "2016-07-27 02:18:15.392531"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Mets"], ["city", "New York"], ["logo_url", "../public/images/newyork-mets.png"], ["stadium", "Citi Field"], ["created_at", "2016-07-27 02:18:15.403685"], ["updated_at", "2016-07-27 02:18:15.403685"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Yankees"], ["city", "New York"], ["logo_url", "../public/images/newyork-yankees.png"], ["stadium", "Yankee Stadium"], ["created_at", "2016-07-27 02:18:15.410293"], ["updated_at", "2016-07-27 02:18:15.410293"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Phillies"], ["city", "Philadelphia"], ["logo_url", "../public/images/philadelphia-phillies.png"], ["stadium", "Citizens Bank Park"], ["created_at", "2016-07-27 02:18:15.416449"], ["updated_at", "2016-07-27 02:18:15.416449"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Athletics"], ["city", "Oakland"], ["logo_url", "../public/images/oakland-athletics.png"], ["stadium", "Oakland Coliseum"], ["created_at", "2016-07-27 02:18:15.420850"], ["updated_at", "2016-07-27 02:18:15.420850"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (1.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Pirates"], ["city", "Pittsburgh"], ["logo_url", "../public/images/pittsburgh-pirates.png"], ["stadium", "PNC Park"], ["created_at", "2016-07-27 02:18:15.435181"], ["updated_at", "2016-07-27 02:18:15.435181"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mariners"], ["city", "Seattle"], ["logo_url", "../public/images/seattle-mariners.png"], ["stadium", "Safeco Field"], ["created_at", "2016-07-27 02:18:15.439915"], ["updated_at", "2016-07-27 02:18:15.439915"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Padres"], ["city", "San Diego"], ["logo_url", "../public/images/sandiego-padres.png"], ["stadium", "Petco Park"], ["created_at", "2016-07-27 02:18:15.445248"], ["updated_at", "2016-07-27 02:18:15.445248"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rays"], ["city", "Tampa Bay"], ["logo_url", "../public/images/tampabay-rays.png"], ["stadium", "Tropicana Field"], ["created_at", "2016-07-27 02:18:15.448720"], ["updated_at", "2016-07-27 02:18:15.448720"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Giants"], ["city", "San Francisco"], ["logo_url", "../public/images/sanfrancisco-giants.png"], ["stadium", "AT&T Park"], ["created_at", "2016-07-27 02:18:15.451999"], ["updated_at", "2016-07-27 02:18:15.451999"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rangers"], ["city", "Texas"], ["logo_url", "../public/images/texas-rangers.png"], ["stadium", "Globe Life Park in Arlington"], ["created_at", "2016-07-27 02:18:15.461669"], ["updated_at", "2016-07-27 02:18:15.461669"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Cardinals"], ["city", "St. Louis"], ["logo_url", "../public/images/stlouis-cardinals.png"], ["stadium", "Busch Stadium"], ["created_at", "2016-07-27 02:18:15.467776"], ["updated_at", "2016-07-27 02:18:15.467776"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Blue Jays"], ["city", "Toronto"], ["logo_url", "../public/images/toronto-bluejays.png"], ["stadium", "Rogers Centre"], ["created_at", "2016-07-27 02:18:15.472735"], ["updated_at", "2016-07-27 02:18:15.472735"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Nationals"], ["city", "Washington"], ["logo_url", "../public/images/washington-nationals.png"], ["stadium", "Nationals Park"], ["created_at", "2016-07-27 02:18:15.479177"], ["updated_at", "2016-07-27 02:18:15.479177"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Braves"], ["city", "Atlanta"], ["logo_url", "../public/images/atlanta-braves.png"], ["stadium", "Turner Field"], ["created_at", "2016-07-27 02:18:15.482423"], ["updated_at", "2016-07-27 02:18:15.482423"]]
+  [1m[35m (0.6ms)[0m  commit transaction
