@@ -38,10 +38,14 @@ body {
 
       <div class="container-fluid">
       <% @games.each do |game|%>
+      <% home_team = Team.find(game.home_team_id) %>
+      <% away_team = Team.find(game.away_team_id) %>
+
      <div class="row-fluid">
      <div class="col-sm-3 teampics">
         <p class="teamtext"><%= game.label %></p>
-        <img src="http://i.forbesimg.com/media/lists/teams/oakland-athletics_416x416.jpg" alt="" width="239px" height="200px">
+        <img src=<%= home_team.image_url%> alt="" width="239px" height="200px">
+        <img src=<%= away_team.image_url%> alt="" width="239px" height="200px">
          <p><%= game.full_name %></p>
         <div class="button">Pick</div>
       </div>

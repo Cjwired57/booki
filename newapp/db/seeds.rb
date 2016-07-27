@@ -6,107 +6,7 @@ Stripe.api_key = "sk_test_LaGOwlDvqeTDlyYRBnWN1y4W"
 
 Game.delete_all
 User.delete_all
-
-u = User.create(email: 'tim@tim.com', password: 'timtim')
-# User.create(email: 'tom@tom.com', password: 'tomtom')
-
-acct = Stripe::Account.create(
-{
-  :country => "US",
-  :managed => true
-}
-)
-
-
-account_id = acct.id
-s_key = acct.keys.secret
-p_key = acct.keys.publishable
-
-# u.account_id = account_id
-ManagedAccount.create(user_id: u.id, account_id: account_id, secret_key: s_key, publishable_key: p_key )
-
-Stattleship.configure do |config|
-  config.api_token = '5faa60b51939bb1b58b5cc0594a2b12b'
-end
-# Construct params for the fetch
-query_params = Stattleship::Params::BaseballGamesParams.new
-
-# use a slug, typically 'league-team_abbreviation'
-# query_params.team_id = 'mlb-bos'
-
-# may need to adjust this depending on time of year
-query_params.season_id = 'mlb-2016'
-query_params.status = 'upcoming'
-query_params.on = 'today'
-
-# fetch will automatically traverse the paginated response links
-games = Stattleship::BaseballGames.fetch(params: query_params)
-
-if games.length > 0
-  # the populated object
-  pp games.first
-
-  # can access friendly helpers
-  pp games.first.started_at.strftime('%b %e, %l:%M %p')
-
-  # or, individual attributes
-  games.each do |game|
-    pp game.scoreline
-    home_team = Team.find_by(name: game.home_team.nickname)
-    away_team = Team.find_by(name: game.away_team.nickname)
-    if home_team
-      if away_team
-        home_team_id = home_team.id
-        away_team_id = away_team.id
-
-        Game.create(
-          label: game.label,
-          full_name: game.name,
-          home_team_id: home_team_id,
-          away_team_id: away_team_id,
-          start_time: game.started_at
-          )
-      end
-    end
-  end
-end
-
-
-  # Construct params for the fetch
-  query_params = Stattleship::Params::BaseballGamesParams.new
-
-# use a slug, typically 'league-team_abbreviation'
-# query_params.team_id = 'mlb-bos'
-
-# may need to adjust this depending on time of year
-query_params.season_id = 'mlb-2016'
-# query_params.status = 'upcoming'
-query_params.on = 'yesterday'
-
-# fetch will automatically traverse the paginated response links
-games = Stattleship::BaseballGames.fetch(params: query_params)
-
-if games.length > 0
-  # the populated object
-  pp games.first
-
-  # can access friendly helpers
-  pp games.first.started_at.strftime('%b %e, %l:%M %p')
-
-  # or, individual attributes
-  games.each do |game|
-    pp game.scoreline
-    g = Game.find_by(full_name: game.name)
-    if g
-      g.update(
-        home_team_score: game.home_team_score,
-        away_team_score: game.away_team_score,
-        finished: true,
-        winning_team: "#{game.winning_team.location} #{game.winning_team.nickname}"
-        )
-    end
-  end
-end
+Team.delete_all
 #team seeds
 Team.create(
   name: "Diamondbacks",
@@ -288,3 +188,126 @@ Team.create(
   logo_url: "../public/images/atlanta-braves.png",
   stadium: "Turner Field"
   )
+u = User.create(email: 'tim@tim.com', password: 'timtim')
+# User.create(email: 'tom@tom.com', password: 'tomtom')
+
+acct = Stripe::Account.create(
+{
+  :country => "US",
+  :managed => true
+}
+)
+
+
+account_id = acct.id
+s_key = acct.keys.secret
+p_key = acct.keys.publishable
+
+# u.account_id = account_id
+ManagedAccount.create(user_id: u.id, account_id: account_id, secret_key: s_key, publishable_key: p_key )
+
+Stattleship.configure do |config|
+  config.api_token = '5faa60b51939bb1b58b5cc0594a2b12b'
+end
+# Construct params for the fetch
+query_params = Stattleship::Params::BaseballGamesParams.new
+
+# use a slug, typically 'league-team_abbreviation'
+# query_params.team_id = 'mlb-bos'
+
+# may need to adjust this depending on time of year
+query_params.season_id = 'mlb-2016'
+query_params.status = 'upcoming'
+query_params.on = 'today'
+
+# fetch will automatically traverse the paginated response links
+games = Stattleship::BaseballGames.fetch(params: query_params)
+
+if games.length > 0
+  # the populated object
+  pp games.first
+
+  # can access friendly helpers
+  pp games.first.started_at.strftime('%b %e, %l:%M %p')
+
+  # or, individual attributes
+  games.each do |game|
+    pp game.scoreline
+    home_team = Team.find_by(name: game.home_team.nickname)
+    away_team = Team.find_by(name: game.away_team.nickname)
+    if home_team
+      if away_team
+        home_team_id = home_team.id
+        away_team_id = away_team.id
+
+        Game.create(
+          label: game.label,
+          full_name: game.name,
+          home_team_id: home_team_id,
+          away_team_id: away_team_id,
+          start_time: game.started_at
+          )
+      end
+    end
+  end
+end
+
+
+  # Construct params for the fetch
+  query_params = Stattleship::Params::BaseballGamesParams.new
+
+# use a slug, typically 'league-team_abbreviation'
+# query_params.team_id = 'mlb-bos'
+
+# may need to adjust this depending on time of year
+query_params.season_id = 'mlb-2016'
+# query_params.status = 'upcoming'
+query_params.on = 'yesterday'
+
+# fetch will automatically traverse the paginated response links
+games = Stattleship::BaseballGames.fetch(params: query_params)
+
+if games.length > 0
+  # the populated object
+  pp games.first
+
+  # can access friendly helpers
+  pp games.first.started_at.strftime('%b %e, %l:%M %p')
+
+  # or, individual attributes
+  games.each do |game|
+    pp game.scoreline
+    g = Game.find_by(full_name: game.name)
+    if g
+      g.update(
+        home_team_score: game.home_team_score,
+        away_team_score: game.away_team_score,
+        finished: true,
+        winning_team: "#{game.winning_team.location} #{game.winning_team.nickname}"
+        )
+    else
+      # h =  game.home_team.location.split.map(&:capitalize).join(' ')
+      # a = game.away_team.location.split.map(&:capitalize).join(' ')
+      home_team = Team.find_by(name: game.home_team.nickname)
+      away_team = Team.find_by(name: game.away_team.nickname)
+      winning_team = Team.find_by(name: game.winning_team.nickname)
+
+      if home_team && away_team
+        home_team_id = home_team.id
+        away_team_id = away_team.id
+        winning_team_id = winning_team.id
+        g = Game.create(
+          label: game.label,
+          full_name: game.name,
+          home_team_id: home_team_id,
+          away_team_id: away_team_id,
+          start_time: game.started_at,
+          home_team_score: game.home_team_score,
+          away_team_score: game.away_team_score,
+          finished: true,
+          winning_team_id: winning_team_id
+          )
+      end
+    end
+  end
+end
