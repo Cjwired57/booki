@@ -3,6 +3,8 @@ require 'stattleship'
 class GameController < ApplicationController
   def index
     @games = Game.all
+    @current_games = Game.current_games
+    # @past_games = Game.past_games
     @teams = Team.all
   end
 
