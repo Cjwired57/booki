@@ -1,0 +1,2 @@
+class ManagedAccountController < ApplicationController
+end

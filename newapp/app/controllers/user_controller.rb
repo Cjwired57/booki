@@ -1,10 +1,19 @@
 class UserController < ApplicationController
 
+  # def password
+  #   @password ||= Password.new(password_digest)
+  # end
+
+  # def password=(new_password)
+  #   @password = Password.create(new_password)
+  #   self.password_digest = @password
+  # end
 # users.password_hash in the database is a :string
   def new
   end
 
   def create
+
     if request.xhr?
       user = User.new(user_params)
       if user.save

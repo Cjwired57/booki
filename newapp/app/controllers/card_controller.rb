@@ -27,8 +27,10 @@ class CardController < ApplicationController
 
       p @user
       p "****"*50
+
       return "cool"
     else
+
     # Stripe::Charge.create(
 
     #   amount: 100,
