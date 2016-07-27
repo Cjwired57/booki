@@ -33017,3 +33017,1264 @@ ActionController::RoutingError (No route matches [GET] "/public/css/stylesweb.cs
   Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
   Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (145.7ms)
+
+
+Started GET "/game" for ::1 at 2016-07-27 13:00:01 -0700
+Processing by GameController#index as HTML
+  [1m[36mGame Load (1.6ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "t"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 265]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 247]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 251]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 264]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 252]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 254]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 255]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 241]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 256]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 270]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 250]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 258]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 266]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 260]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 257]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 267]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 244]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 245]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 253]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 259]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 246]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 269]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 242]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 248]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 268]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 263]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 261]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 262]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 243]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 249]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 257]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 267]]
+  Rendered game/index.html.erb within layouts/application (105.1ms)
+Completed 200 OK in 245ms (Views: 212.4ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/assets/game.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:00:01 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:00:01 -0700
+
+
+Started GET "/assets/managed_account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:00:01 -0700
+
+
+Started GET "/assets/request.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:00:01 -0700
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:00:01 -0700
+
+
+Started GET "/assets/bet.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/public/css/stylesweb.css" for ::1 at 2016-07-27 13:00:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/public/css/stylesweb.css"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.9ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (143.1ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (169.6ms)
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/card.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/game.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/bet.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/request.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/managed_account.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-27 13:00:02 -0700
+
+
+Started GET "/public/css/stylesweb.css" for ::1 at 2016-07-27 13:00:02 -0700
+
+ActionController::RoutingError (No route matches [GET] "/public/css/stylesweb.css"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (129.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (77.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (196.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "teams"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Diamondbacks"], ["city", "Arizona"], ["logo_url", "/images/arizona-diamondbacks.png"], ["stadium", "Chase Field"], ["created_at", "2016-07-27 20:00:40.000498"], ["updated_at", "2016-07-27 20:00:40.000498"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Red Sox"], ["city", "Boston"], ["logo_url", "/images/boston-redsox.png"], ["stadium", "Fenway Park"], ["created_at", "2016-07-27 20:00:40.009981"], ["updated_at", "2016-07-27 20:00:40.009981"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Orioles"], ["city", "Baltimore"], ["logo_url", "/images/baltimore-orioles.png"], ["stadium", "Oriole Park"], ["created_at", "2016-07-27 20:00:40.016042"], ["updated_at", "2016-07-27 20:00:40.016042"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "White Sox"], ["city", "Chicago"], ["logo_url", "/images/chicago-whitesox.png"], ["stadium", "U.S. Cellular Field"], ["created_at", "2016-07-27 20:00:40.019027"], ["updated_at", "2016-07-27 20:00:40.019027"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cubs"], ["city", "Chicago"], ["logo_url", "/images/chicago-cubs.png"], ["stadium", "Wrigley Field"], ["created_at", "2016-07-27 20:00:40.021274"], ["updated_at", "2016-07-27 20:00:40.021274"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Indians"], ["city", "Cleveland"], ["logo_url", "/images/cleveland-indians.png"], ["stadium", "Progressive Field"], ["created_at", "2016-07-27 20:00:40.023811"], ["updated_at", "2016-07-27 20:00:40.023811"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Reds"], ["city", "Cincinatti"], ["logo_url", "/images/cincinatti-reds.png"], ["stadium", "Great American Ball Park"], ["created_at", "2016-07-27 20:00:40.026943"], ["updated_at", "2016-07-27 20:00:40.026943"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Tigers"], ["city", "Detroit"], ["logo_url", "/images/detroit-tigers.png"], ["stadium", "Comerica Park"], ["created_at", "2016-07-27 20:00:40.030446"], ["updated_at", "2016-07-27 20:00:40.030446"]]
+  [1m[36m (3.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rockies"], ["city", "Colorado"], ["logo_url", "/images/colorado-rockies.png"], ["stadium", "Coors Field"], ["created_at", "2016-07-27 20:00:40.040358"], ["updated_at", "2016-07-27 20:00:40.040358"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Astros"], ["city", "Houston"], ["logo_url", "/images/houston-astros.png"], ["stadium", "Minute Maid Park"], ["created_at", "2016-07-27 20:00:40.045215"], ["updated_at", "2016-07-27 20:00:40.045215"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dodgers"], ["city", "Los Angeles"], ["logo_url", "/images/losangeles-dodgers.png"], ["stadium", "Dodger Stadium"], ["created_at", "2016-07-27 20:00:40.047708"], ["updated_at", "2016-07-27 20:00:40.047708"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Royals"], ["city", "Kansas City"], ["logo_url", "/images/kansascity-royals.png"], ["stadium", "Kauffman Stadium"], ["created_at", "2016-07-27 20:00:40.050050"], ["updated_at", "2016-07-27 20:00:40.050050"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Marlins"], ["city", "Miami"], ["logo_url", "/images/miami-marlins.png"], ["stadium", "Marlins Park"], ["created_at", "2016-07-27 20:00:40.052331"], ["updated_at", "2016-07-27 20:00:40.052331"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Angels"], ["city", "Los Angeles"], ["logo_url", "/images/losangeles-angels.png"], ["stadium", "Angel Stadium"], ["created_at", "2016-07-27 20:00:40.054349"], ["updated_at", "2016-07-27 20:00:40.054349"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Brewers"], ["city", "Milwaukee"], ["logo_url", "/images/milwaukee-brewers.png"], ["stadium", "Miller Park"], ["created_at", "2016-07-27 20:00:40.057074"], ["updated_at", "2016-07-27 20:00:40.057074"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Twins"], ["city", "Minnesota"], ["logo_url", "/images/minnesota-twins.png"], ["stadium", "Target Field"], ["created_at", "2016-07-27 20:00:40.059276"], ["updated_at", "2016-07-27 20:00:40.059276"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mets"], ["city", "New York"], ["logo_url", "/images/newyork-mets.png"], ["stadium", "Citi Field"], ["created_at", "2016-07-27 20:00:40.061840"], ["updated_at", "2016-07-27 20:00:40.061840"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Yankees"], ["city", "New York"], ["logo_url", "/images/newyork-yankees.png"], ["stadium", "Yankee Stadium"], ["created_at", "2016-07-27 20:00:40.064158"], ["updated_at", "2016-07-27 20:00:40.064158"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Phillies"], ["city", "Philadelphia"], ["logo_url", "/images/philadelphia-phillies.png"], ["stadium", "Citizens Bank Park"], ["created_at", "2016-07-27 20:00:40.066227"], ["updated_at", "2016-07-27 20:00:40.066227"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Athletics"], ["city", "Oakland"], ["logo_url", "/images/oakland-athletics.png"], ["stadium", "Oakland Coliseum"], ["created_at", "2016-07-27 20:00:40.068398"], ["updated_at", "2016-07-27 20:00:40.068398"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pirates"], ["city", "Pittsburgh"], ["logo_url", "/images/pittsburgh-pirates.png"], ["stadium", "PNC Park"], ["created_at", "2016-07-27 20:00:40.070420"], ["updated_at", "2016-07-27 20:00:40.070420"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Mariners"], ["city", "Seattle"], ["logo_url", "/images/seattle-mariners.png"], ["stadium", "Safeco Field"], ["created_at", "2016-07-27 20:00:40.072640"], ["updated_at", "2016-07-27 20:00:40.072640"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Padres"], ["city", "San Diego"], ["logo_url", "/images/sandiego-padres.png"], ["stadium", "Petco Park"], ["created_at", "2016-07-27 20:00:40.074843"], ["updated_at", "2016-07-27 20:00:40.074843"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Rays"], ["city", "Tampa Bay"], ["logo_url", "/images/tampabay-rays.png"], ["stadium", "Tropicana Field"], ["created_at", "2016-07-27 20:00:40.079887"], ["updated_at", "2016-07-27 20:00:40.079887"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Giants"], ["city", "San Francisco"], ["logo_url", "/images/sanfrancisco-giants.png"], ["stadium", "AT&T Park"], ["created_at", "2016-07-27 20:00:40.083071"], ["updated_at", "2016-07-27 20:00:40.083071"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Rangers"], ["city", "Texas"], ["logo_url", "/images/texas-rangers.png"], ["stadium", "Globe Life Park in Arlington"], ["created_at", "2016-07-27 20:00:40.085394"], ["updated_at", "2016-07-27 20:00:40.085394"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cardinals"], ["city", "St. Louis"], ["logo_url", "/images/stlouis-cardinals.png"], ["stadium", "Busch Stadium"], ["created_at", "2016-07-27 20:00:40.088205"], ["updated_at", "2016-07-27 20:00:40.088205"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Blue Jays"], ["city", "Toronto"], ["logo_url", "/images/toronto-bluejays.png"], ["stadium", "Rogers Centre"], ["created_at", "2016-07-27 20:00:40.090654"], ["updated_at", "2016-07-27 20:00:40.090654"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nationals"], ["city", "Washington"], ["logo_url", "/images/washington-nationals.png"], ["stadium", "Nationals Park"], ["created_at", "2016-07-27 20:00:40.092907"], ["updated_at", "2016-07-27 20:00:40.092907"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Braves"], ["city", "Atlanta"], ["logo_url", "/images/atlanta-braves.png"], ["stadium", "Turner Field"], ["created_at", "2016-07-27 20:00:40.096326"], ["updated_at", "2016-07-27 20:00:40.096326"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tim@tim.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "tim@tim.com"], ["password_digest", "$2a$10$bksw8rBtVYYgMu7ofHLaZ.1DiaLsAet52C2gKLEKe4eiWkk0xMxrS"], ["created_at", "2016-07-27 20:00:40.201352"], ["updated_at", "2016-07-27 20:00:40.201352"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Royals"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Angels"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Angels vs Royals"], ["full_name", "Angels vs Royals July 27, 2016 at  7:15pm"], ["home_team_id", 282], ["away_team_id", 284], ["start_time", "2016-07-28 00:15:00.000000"], ["created_at", "2016-07-27 20:00:41.280543"], ["updated_at", "2016-07-27 20:00:41.280543"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Brewers"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Diamondbacks"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Diamondbacks vs Brewers"], ["full_name", "Diamondbacks vs Brewers July 27, 2016 at  7:10pm"], ["home_team_id", 285], ["away_team_id", 271], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:00:41.284775"], ["updated_at", "2016-07-27 20:00:41.284775"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Twins"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Braves"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Braves vs Twins"], ["full_name", "Braves vs Twins July 27, 2016 at  7:10pm"], ["home_team_id", 286], ["away_team_id", 300], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:00:41.288929"], ["updated_at", "2016-07-27 20:00:41.288929"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Astros"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Yankees"]]
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Yankees vs Astros"], ["full_name", "Yankees vs Astros July 27, 2016 at  7:10pm"], ["home_team_id", 280], ["away_team_id", 288], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:00:41.302349"], ["updated_at", "2016-07-27 20:00:41.302349"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Cubs"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "White Sox"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "White Sox vs Cubs"], ["full_name", "White Sox vs Cubs July 27, 2016 at  7:05pm"], ["home_team_id", 275], ["away_team_id", 274], ["start_time", "2016-07-28 00:05:00.000000"], ["created_at", "2016-07-27 20:00:41.310085"], ["updated_at", "2016-07-27 20:00:41.310085"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Rangers"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Athletics"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Athletics vs Rangers"], ["full_name", "Athletics vs Rangers July 27, 2016 at  7:05pm"], ["home_team_id", 296], ["away_team_id", 290], ["start_time", "2016-07-28 00:05:00.000000"], ["created_at", "2016-07-27 20:00:41.315016"], ["updated_at", "2016-07-27 20:00:41.315016"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mets"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Cardinals"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Cardinals vs Mets"], ["full_name", "Cardinals vs Mets July 27, 2016 at  7:10pm"], ["home_team_id", 287], ["away_team_id", 297], ["start_time", "2016-07-27 23:10:00.000000"], ["created_at", "2016-07-27 20:00:41.319034"], ["updated_at", "2016-07-27 20:00:41.319034"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Pirates"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mariners"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Mariners vs Pirates"], ["full_name", "Mariners vs Pirates July 27, 2016 at  7:05pm"], ["home_team_id", 291], ["away_team_id", 292], ["start_time", "2016-07-27 23:05:00.000000"], ["created_at", "2016-07-27 20:00:41.323913"], ["updated_at", "2016-07-27 20:00:41.323913"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Orioles"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Rockies"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Rockies vs Orioles"], ["full_name", "Rockies vs Orioles July 27, 2016 at  7:05pm"], ["home_team_id", 273], ["away_team_id", 279], ["start_time", "2016-07-27 23:05:00.000000"], ["created_at", "2016-07-27 20:00:41.330099"], ["updated_at", "2016-07-27 20:00:41.330099"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Reds vs Giants July 26, 2016 at  7:15pm"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.0ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "teams"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (2.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Diamondbacks"], ["city", "Arizona"], ["logo_url", "/images/arizona-diamondbacks.png"], ["stadium", "Chase Field"], ["created_at", "2016-07-27 20:02:43.449538"], ["updated_at", "2016-07-27 20:02:43.449538"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Red Sox"], ["city", "Boston"], ["logo_url", "/images/boston-redsox.png"], ["stadium", "Fenway Park"], ["created_at", "2016-07-27 20:02:43.464214"], ["updated_at", "2016-07-27 20:02:43.464214"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Orioles"], ["city", "Baltimore"], ["logo_url", "/images/baltimore-orioles.png"], ["stadium", "Oriole Park"], ["created_at", "2016-07-27 20:02:43.467523"], ["updated_at", "2016-07-27 20:02:43.467523"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "White Sox"], ["city", "Chicago"], ["logo_url", "/images/chicago-whitesox.png"], ["stadium", "U.S. Cellular Field"], ["created_at", "2016-07-27 20:02:43.469888"], ["updated_at", "2016-07-27 20:02:43.469888"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cubs"], ["city", "Chicago"], ["logo_url", "/images/chicago-cubs.png"], ["stadium", "Wrigley Field"], ["created_at", "2016-07-27 20:02:43.472124"], ["updated_at", "2016-07-27 20:02:43.472124"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Indians"], ["city", "Cleveland"], ["logo_url", "/images/cleveland-indians.png"], ["stadium", "Progressive Field"], ["created_at", "2016-07-27 20:02:43.474182"], ["updated_at", "2016-07-27 20:02:43.474182"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Reds"], ["city", "Cincinatti"], ["logo_url", "/images/cincinatti-reds.png"], ["stadium", "Great American Ball Park"], ["created_at", "2016-07-27 20:02:43.476378"], ["updated_at", "2016-07-27 20:02:43.476378"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Tigers"], ["city", "Detroit"], ["logo_url", "/images/detroit-tigers.png"], ["stadium", "Comerica Park"], ["created_at", "2016-07-27 20:02:43.479059"], ["updated_at", "2016-07-27 20:02:43.479059"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rockies"], ["city", "Colorado"], ["logo_url", "/images/colorado-rockies.png"], ["stadium", "Coors Field"], ["created_at", "2016-07-27 20:02:43.481406"], ["updated_at", "2016-07-27 20:02:43.481406"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Astros"], ["city", "Houston"], ["logo_url", "/images/houston-astros.png"], ["stadium", "Minute Maid Park"], ["created_at", "2016-07-27 20:02:43.483534"], ["updated_at", "2016-07-27 20:02:43.483534"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Dodgers"], ["city", "Los Angeles"], ["logo_url", "/images/losangeles-dodgers.png"], ["stadium", "Dodger Stadium"], ["created_at", "2016-07-27 20:02:43.485405"], ["updated_at", "2016-07-27 20:02:43.485405"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Royals"], ["city", "Kansas City"], ["logo_url", "/images/kansascity-royals.png"], ["stadium", "Kauffman Stadium"], ["created_at", "2016-07-27 20:02:43.487304"], ["updated_at", "2016-07-27 20:02:43.487304"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Marlins"], ["city", "Miami"], ["logo_url", "/images/miami-marlins.png"], ["stadium", "Marlins Park"], ["created_at", "2016-07-27 20:02:43.489898"], ["updated_at", "2016-07-27 20:02:43.489898"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Angels"], ["city", "Los Angeles"], ["logo_url", "/images/losangeles-angels.png"], ["stadium", "Angel Stadium"], ["created_at", "2016-07-27 20:02:43.492668"], ["updated_at", "2016-07-27 20:02:43.492668"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Brewers"], ["city", "Milwaukee"], ["logo_url", "/images/milwaukee-brewers.png"], ["stadium", "Miller Park"], ["created_at", "2016-07-27 20:02:43.495070"], ["updated_at", "2016-07-27 20:02:43.495070"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Twins"], ["city", "Minnesota"], ["logo_url", "/images/minnesota-twins.png"], ["stadium", "Target Field"], ["created_at", "2016-07-27 20:02:43.497357"], ["updated_at", "2016-07-27 20:02:43.497357"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mets"], ["city", "New York"], ["logo_url", "/images/newyork-mets.png"], ["stadium", "Citi Field"], ["created_at", "2016-07-27 20:02:43.500223"], ["updated_at", "2016-07-27 20:02:43.500223"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Yankees"], ["city", "New York"], ["logo_url", "/images/newyork-yankees.png"], ["stadium", "Yankee Stadium"], ["created_at", "2016-07-27 20:02:43.506477"], ["updated_at", "2016-07-27 20:02:43.506477"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Phillies"], ["city", "Philadelphia"], ["logo_url", "/images/philadelphia-phillies.png"], ["stadium", "Citizens Bank Park"], ["created_at", "2016-07-27 20:02:43.509819"], ["updated_at", "2016-07-27 20:02:43.509819"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Athletics"], ["city", "Oakland"], ["logo_url", "/images/oakland-athletics.png"], ["stadium", "Oakland Coliseum"], ["created_at", "2016-07-27 20:02:43.512569"], ["updated_at", "2016-07-27 20:02:43.512569"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Pirates"], ["city", "Pittsburgh"], ["logo_url", "/images/pittsburgh-pirates.png"], ["stadium", "PNC Park"], ["created_at", "2016-07-27 20:02:43.514833"], ["updated_at", "2016-07-27 20:02:43.514833"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Mariners"], ["city", "Seattle"], ["logo_url", "/images/seattle-mariners.png"], ["stadium", "Safeco Field"], ["created_at", "2016-07-27 20:02:43.518008"], ["updated_at", "2016-07-27 20:02:43.518008"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Padres"], ["city", "San Diego"], ["logo_url", "/images/sandiego-padres.png"], ["stadium", "Petco Park"], ["created_at", "2016-07-27 20:02:43.520655"], ["updated_at", "2016-07-27 20:02:43.520655"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Rays"], ["city", "Tampa Bay"], ["logo_url", "/images/tampabay-rays.png"], ["stadium", "Tropicana Field"], ["created_at", "2016-07-27 20:02:43.524220"], ["updated_at", "2016-07-27 20:02:43.524220"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Giants"], ["city", "San Francisco"], ["logo_url", "/images/sanfrancisco-giants.png"], ["stadium", "AT&T Park"], ["created_at", "2016-07-27 20:02:43.535032"], ["updated_at", "2016-07-27 20:02:43.535032"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Rangers"], ["city", "Texas"], ["logo_url", "/images/texas-rangers.png"], ["stadium", "Globe Life Park in Arlington"], ["created_at", "2016-07-27 20:02:43.537757"], ["updated_at", "2016-07-27 20:02:43.537757"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Cardinals"], ["city", "St. Louis"], ["logo_url", "/images/stlouis-cardinals.png"], ["stadium", "Busch Stadium"], ["created_at", "2016-07-27 20:02:43.539953"], ["updated_at", "2016-07-27 20:02:43.539953"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Blue Jays"], ["city", "Toronto"], ["logo_url", "/images/toronto-bluejays.png"], ["stadium", "Rogers Centre"], ["created_at", "2016-07-27 20:02:43.542068"], ["updated_at", "2016-07-27 20:02:43.542068"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nationals"], ["city", "Washington"], ["logo_url", "/images/washington-nationals.png"], ["stadium", "Nationals Park"], ["created_at", "2016-07-27 20:02:43.544353"], ["updated_at", "2016-07-27 20:02:43.544353"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Braves"], ["city", "Atlanta"], ["logo_url", "/images/atlanta-braves.png"], ["stadium", "Turner Field"], ["created_at", "2016-07-27 20:02:43.547095"], ["updated_at", "2016-07-27 20:02:43.547095"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tim@tim.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "tim@tim.com"], ["password_digest", "$2a$10$ywExvxVw3V.Lcf6wVS74juJ.RC5p9xdwEo3cfu6K9zmza4LTtuMfC"], ["created_at", "2016-07-27 20:02:43.642241"], ["updated_at", "2016-07-27 20:02:43.642241"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Royals"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Angels"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Angels vs Royals"], ["full_name", "Angels vs Royals July 27, 2016 at  7:15pm"], ["home_team_id", 312], ["away_team_id", 314], ["start_time", "2016-07-28 00:15:00.000000"], ["created_at", "2016-07-27 20:02:44.467678"], ["updated_at", "2016-07-27 20:02:44.467678"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Brewers"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Diamondbacks"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Diamondbacks vs Brewers"], ["full_name", "Diamondbacks vs Brewers July 27, 2016 at  7:10pm"], ["home_team_id", 315], ["away_team_id", 301], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:02:44.471945"], ["updated_at", "2016-07-27 20:02:44.471945"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Twins"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Braves"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Braves vs Twins"], ["full_name", "Braves vs Twins July 27, 2016 at  7:10pm"], ["home_team_id", 316], ["away_team_id", 330], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:02:44.476057"], ["updated_at", "2016-07-27 20:02:44.476057"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Astros"]]
+  [1m[35mTeam Load (1.0ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Yankees"]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Yankees vs Astros"], ["full_name", "Yankees vs Astros July 27, 2016 at  7:10pm"], ["home_team_id", 310], ["away_team_id", 318], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:02:44.483120"], ["updated_at", "2016-07-27 20:02:44.483120"]]
+  [1m[36m (3.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Cubs"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "White Sox"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "White Sox vs Cubs"], ["full_name", "White Sox vs Cubs July 27, 2016 at  7:05pm"], ["home_team_id", 305], ["away_team_id", 304], ["start_time", "2016-07-28 00:05:00.000000"], ["created_at", "2016-07-27 20:02:44.495812"], ["updated_at", "2016-07-27 20:02:44.495812"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Rangers"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Athletics"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Athletics vs Rangers"], ["full_name", "Athletics vs Rangers July 27, 2016 at  7:05pm"], ["home_team_id", 326], ["away_team_id", 320], ["start_time", "2016-07-28 00:05:00.000000"], ["created_at", "2016-07-27 20:02:44.500474"], ["updated_at", "2016-07-27 20:02:44.500474"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mets"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Cardinals"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Cardinals vs Mets"], ["full_name", "Cardinals vs Mets July 27, 2016 at  7:10pm"], ["home_team_id", 317], ["away_team_id", 327], ["start_time", "2016-07-27 23:10:00.000000"], ["created_at", "2016-07-27 20:02:44.503083"], ["updated_at", "2016-07-27 20:02:44.503083"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Pirates"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mariners"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Mariners vs Pirates"], ["full_name", "Mariners vs Pirates July 27, 2016 at  7:05pm"], ["home_team_id", 321], ["away_team_id", 322], ["start_time", "2016-07-27 23:05:00.000000"], ["created_at", "2016-07-27 20:02:44.507595"], ["updated_at", "2016-07-27 20:02:44.507595"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Orioles"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Rockies"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Rockies vs Orioles"], ["full_name", "Rockies vs Orioles July 27, 2016 at  7:05pm"], ["home_team_id", 303], ["away_team_id", 309], ["start_time", "2016-07-27 23:05:00.000000"], ["created_at", "2016-07-27 20:02:44.512113"], ["updated_at", "2016-07-27 20:02:44.512113"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Reds vs Giants July 26, 2016 at  7:15pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Giants"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 325], ["updated_at", "2016-07-27 20:02:46.035522"], ["id", 63]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Rays vs Dodgers July 26, 2016 at  7:10pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Dodgers"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 311], ["updated_at", "2016-07-27 20:02:46.041913"], ["id", 64]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Angels vs Royals July 26, 2016 at  7:15pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Angels"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 314], ["updated_at", "2016-07-27 20:02:46.045333"], ["id", 65]]
+  [1m[36m (3.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Diamondbacks vs Brewers July 26, 2016 at  7:10pm"]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Brewers"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 315], ["updated_at", "2016-07-27 20:02:46.057139"], ["id", 66]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Braves vs Twins July 26, 2016 at  7:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Braves"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 330], ["updated_at", "2016-07-27 20:02:46.060868"], ["id", 67]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Yankees vs Astros July 26, 2016 at  7:10pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Yankees"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 318], ["updated_at", "2016-07-27 20:02:46.065476"], ["id", 68]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Athletics vs Rangers July 26, 2016 at  7:05pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Athletics"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 320], ["updated_at", "2016-07-27 20:02:46.069684"], ["id", 69]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Cardinals vs Mets July 26, 2016 at  8:00pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Mets"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 317], ["updated_at", "2016-07-27 20:02:46.074312"], ["id", 70]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Cubs vs White Sox July 26, 2016 at  6:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "White Sox"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 304], ["updated_at", "2016-07-27 20:02:46.078581"], ["id", 71]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Phillies vs Marlins July 26, 2016 at  7:10pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Marlins"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 313], ["updated_at", "2016-07-27 20:02:46.082213"], ["id", 72]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Nationals vs Indians July 26, 2016 at  7:10pm"]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Indians"]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 306], ["updated_at", "2016-07-27 20:02:46.091945"], ["id", 73]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Tigers vs Red Sox July 26, 2016 at  7:10pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Tigers"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 308], ["updated_at", "2016-07-27 20:02:46.099363"], ["id", 74]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Padres vs Blue Jays July 26, 2016 at  7:07pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Blue Jays"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 328], ["updated_at", "2016-07-27 20:02:46.103450"], ["id", 75]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.3ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Mariners vs Pirates July 26, 2016 at  7:05pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Mariners"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 322], ["updated_at", "2016-07-27 20:02:46.107260"], ["id", 76]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Rockies vs Orioles July 26, 2016 at  7:05pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Rockies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?  [["winning_team_id", 309], ["updated_at", "2016-07-27 20:02:46.110996"], ["id", 77]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.6ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Cardinals vs Mets July 26, 2016 at  4:10pm"]]
+  [1m[36mTeam Load (1.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Cardinals"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "games" SET "winning_team_id" = ?, "updated_at" = ? WHERE "games"."id" = ?[0m  [["winning_team_id", 327], ["updated_at", "2016-07-27 20:02:46.122613"], ["id", 78]]
+  [1m[35m (1.4ms)[0m  commit transaction
+
+
+Started GET "/game" for ::1 at 2016-07-27 13:02:57 -0700
+Processing by GameController#index as HTML
+  [1m[35mGame Load (0.7ms)[0m  SELECT "games".* FROM "games" WHERE "games"."finished" = ?  [["finished", "t"]]
+  [1m[36mTeam Load (0.4ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 265]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 247]]
+  Rendered game/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `logo_url' for nil:NilClass):
+    44:      <div class="row-fluid">
+    45:      <div class="col-sm-3 teampics">
+    46:         <p class="teamtext"><%= game.label %></p>
+    47:         <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
+    48:         <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
+    49:          <p><%= game.full_name %></p>
+    50:         <div class="button">Pick</div>
+  app/views/game/index.html.erb:47:in `block in _app_views_game_index_html_erb___3946666532547061405_70121332691780'
+  app/views/game/index.html.erb:40:in `_app_views_game_index_html_erb___3946666532547061405_70121332691780'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (73.7ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (166.9ms)
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT  "games".* FROM "games"  ORDER BY "games"."id" DESC LIMIT 1[0m
+  [1m[35mGame Load (0.6ms)[0m  SELECT "games".* FROM "games" WHERE "games"."finished" = ?  [["finished", "t"]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "f"]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT "games".* FROM "games" WHERE "games"."finished" = ?  [["finished", "t"]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "f"]]
+
+
+Started GET "/game" for ::1 at 2016-07-27 13:05:49 -0700
+Processing by GameController#index as HTML
+  [1m[36mGame Load (0.6ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "f"]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 252]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 254]]
+  Rendered game/index.html.erb within layouts/application (64.6ms)
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 4.8ms)
+
+ActionView::Template::Error (undefined method `logo_url' for nil:NilClass):
+    44:      <div class="row-fluid">
+    45:      <div class="col-sm-3 teampics">
+    46:         <p class="teamtext"><%= game.label %></p>
+    47:         <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
+    48:         <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
+    49:          <p><%= game.full_name %></p>
+    50:         <div class="button">Pick</div>
+  app/views/game/index.html.erb:47:in `block in _app_views_game_index_html_erb___3946666532547061405_70121332691780'
+  app/views/game/index.html.erb:40:in `_app_views_game_index_html_erb___3946666532547061405_70121332691780'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (79.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (158.4ms)
+  [1m[36mGame Load (0.8ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "f"]]
+
+
+Started GET "/game" for ::1 at 2016-07-27 13:06:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GameController#index as HTML
+  [1m[35mGame Load (0.7ms)[0m  SELECT "games".* FROM "games" WHERE "games"."finished" = ?  [["finished", "f"]]
+  [1m[36mTeam Load (0.7ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 252]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 254]]
+  Rendered game/index.html.erb within layouts/application (60.7ms)
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (undefined method `logo_url' for nil:NilClass):
+    44:      <div class="row-fluid">
+    45:      <div class="col-sm-3 teampics">
+    46:         <p class="teamtext"><%= game.label %></p>
+    47:         <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
+    48:         <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
+    49:          <p><%= game.full_name %></p>
+    50:         <div class="button">Pick</div>
+  app/views/game/index.html.erb:47:in `block in _app_views_game_index_html_erb___3406471469197204530_70194962819340'
+  app/views/game/index.html.erb:40:in `_app_views_game_index_html_erb___3406471469197204530_70194962819340'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.2ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (82.2ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (191.8ms)
+
+
+Started GET "/game" for ::1 at 2016-07-27 13:06:24 -0700
+Processing by GameController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "f"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 252]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 254]]
+  Rendered game/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `logo_url' for nil:NilClass):
+    44:      <div class="row-fluid">
+    45:      <div class="col-sm-3 teampics">
+    46:         <p class="teamtext"><%= game.label %></p>
+    47:         <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
+    48:         <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
+    49:          <p><%= game.full_name %></p>
+    50:         <div class="button">Pick</div>
+  app/views/game/index.html.erb:47:in `block in _app_views_game_index_html_erb___3406471469197204530_70194962819340'
+  app/views/game/index.html.erb:40:in `_app_views_game_index_html_erb___3406471469197204530_70194962819340'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (21.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.2ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (68.9ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (153.3ms)
+  [1m[35mGame Load (1.0ms)[0m  SELECT "games".* FROM "games" WHERE "games"."finished" = ?  [["finished", "f"]]
+  [1m[36mGame Load (0.3ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "f"]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 252]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams"  ORDER BY "teams"."id" ASC LIMIT 1[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games" WHERE "games"."team_id" = ?  [[nil, 301]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams"  ORDER BY "teams"."id" ASC LIMIT 1[0m
+  [1m[35mGame Load (0.5ms)[0m  SELECT "games".* FROM "games" WHERE "games"."home_team_id" = ?  [["home_team_id", 301]]
+  [1m[36mGame Load (0.4ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."away_team_id" = ?[0m  [["away_team_id", 301]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games"  ORDER BY "games"."id" ASC LIMIT 1
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 252]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 254]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "games"
+  [1m[36mSQL (1.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "teams"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Diamondbacks"], ["city", "Arizona"], ["logo_url", "/images/arizona-diamondbacks.png"], ["stadium", "Chase Field"], ["created_at", "2016-07-27 20:12:39.488523"], ["updated_at", "2016-07-27 20:12:39.488523"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Red Sox"], ["city", "Boston"], ["logo_url", "/images/boston-redsox.png"], ["stadium", "Fenway Park"], ["created_at", "2016-07-27 20:12:39.493820"], ["updated_at", "2016-07-27 20:12:39.493820"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Orioles"], ["city", "Baltimore"], ["logo_url", "/images/baltimore-orioles.png"], ["stadium", "Oriole Park"], ["created_at", "2016-07-27 20:12:39.496776"], ["updated_at", "2016-07-27 20:12:39.496776"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "White Sox"], ["city", "Chicago"], ["logo_url", "/images/chicago-whitesox.png"], ["stadium", "U.S. Cellular Field"], ["created_at", "2016-07-27 20:12:39.499244"], ["updated_at", "2016-07-27 20:12:39.499244"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Cubs"], ["city", "Chicago"], ["logo_url", "/images/chicago-cubs.png"], ["stadium", "Wrigley Field"], ["created_at", "2016-07-27 20:12:39.501344"], ["updated_at", "2016-07-27 20:12:39.501344"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Indians"], ["city", "Cleveland"], ["logo_url", "/images/cleveland-indians.png"], ["stadium", "Progressive Field"], ["created_at", "2016-07-27 20:12:39.503699"], ["updated_at", "2016-07-27 20:12:39.503699"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Reds"], ["city", "Cincinatti"], ["logo_url", "/images/cincinatti-reds.png"], ["stadium", "Great American Ball Park"], ["created_at", "2016-07-27 20:12:39.506406"], ["updated_at", "2016-07-27 20:12:39.506406"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Tigers"], ["city", "Detroit"], ["logo_url", "/images/detroit-tigers.png"], ["stadium", "Comerica Park"], ["created_at", "2016-07-27 20:12:39.512606"], ["updated_at", "2016-07-27 20:12:39.512606"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Rockies"], ["city", "Colorado"], ["logo_url", "/images/colorado-rockies.png"], ["stadium", "Coors Field"], ["created_at", "2016-07-27 20:12:39.515181"], ["updated_at", "2016-07-27 20:12:39.515181"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Astros"], ["city", "Houston"], ["logo_url", "/images/houston-astros.png"], ["stadium", "Minute Maid Park"], ["created_at", "2016-07-27 20:12:39.518032"], ["updated_at", "2016-07-27 20:12:39.518032"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Dodgers"], ["city", "Los Angeles"], ["logo_url", "/images/losangeles-dodgers.png"], ["stadium", "Dodger Stadium"], ["created_at", "2016-07-27 20:12:39.520318"], ["updated_at", "2016-07-27 20:12:39.520318"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Royals"], ["city", "Kansas City"], ["logo_url", "/images/kansascity-royals.png"], ["stadium", "Kauffman Stadium"], ["created_at", "2016-07-27 20:12:39.522701"], ["updated_at", "2016-07-27 20:12:39.522701"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Marlins"], ["city", "Miami"], ["logo_url", "/images/miami-marlins.png"], ["stadium", "Marlins Park"], ["created_at", "2016-07-27 20:12:39.525788"], ["updated_at", "2016-07-27 20:12:39.525788"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Angels"], ["city", "Los Angeles"], ["logo_url", "/images/losangeles-angels.png"], ["stadium", "Angel Stadium"], ["created_at", "2016-07-27 20:12:39.528867"], ["updated_at", "2016-07-27 20:12:39.528867"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Brewers"], ["city", "Milwaukee"], ["logo_url", "/images/milwaukee-brewers.png"], ["stadium", "Miller Park"], ["created_at", "2016-07-27 20:12:39.534166"], ["updated_at", "2016-07-27 20:12:39.534166"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Twins"], ["city", "Minnesota"], ["logo_url", "/images/minnesota-twins.png"], ["stadium", "Target Field"], ["created_at", "2016-07-27 20:12:39.544166"], ["updated_at", "2016-07-27 20:12:39.544166"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Mets"], ["city", "New York"], ["logo_url", "/images/newyork-mets.png"], ["stadium", "Citi Field"], ["created_at", "2016-07-27 20:12:39.546555"], ["updated_at", "2016-07-27 20:12:39.546555"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Yankees"], ["city", "New York"], ["logo_url", "/images/newyork-yankees.png"], ["stadium", "Yankee Stadium"], ["created_at", "2016-07-27 20:12:39.548722"], ["updated_at", "2016-07-27 20:12:39.548722"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Phillies"], ["city", "Philadelphia"], ["logo_url", "/images/philadelphia-phillies.png"], ["stadium", "Citizens Bank Park"], ["created_at", "2016-07-27 20:12:39.551190"], ["updated_at", "2016-07-27 20:12:39.551190"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Athletics"], ["city", "Oakland"], ["logo_url", "/images/oakland-athletics.png"], ["stadium", "Oakland Coliseum"], ["created_at", "2016-07-27 20:12:39.553793"], ["updated_at", "2016-07-27 20:12:39.553793"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Pirates"], ["city", "Pittsburgh"], ["logo_url", "/images/pittsburgh-pirates.png"], ["stadium", "PNC Park"], ["created_at", "2016-07-27 20:12:39.556354"], ["updated_at", "2016-07-27 20:12:39.556354"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mariners"], ["city", "Seattle"], ["logo_url", "/images/seattle-mariners.png"], ["stadium", "Safeco Field"], ["created_at", "2016-07-27 20:12:39.558677"], ["updated_at", "2016-07-27 20:12:39.558677"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Padres"], ["city", "San Diego"], ["logo_url", "/images/sandiego-padres.png"], ["stadium", "Petco Park"], ["created_at", "2016-07-27 20:12:39.561077"], ["updated_at", "2016-07-27 20:12:39.561077"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rays"], ["city", "Tampa Bay"], ["logo_url", "/images/tampabay-rays.png"], ["stadium", "Tropicana Field"], ["created_at", "2016-07-27 20:12:39.563164"], ["updated_at", "2016-07-27 20:12:39.563164"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Giants"], ["city", "San Francisco"], ["logo_url", "/images/sanfrancisco-giants.png"], ["stadium", "AT&T Park"], ["created_at", "2016-07-27 20:12:39.565232"], ["updated_at", "2016-07-27 20:12:39.565232"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rangers"], ["city", "Texas"], ["logo_url", "/images/texas-rangers.png"], ["stadium", "Globe Life Park in Arlington"], ["created_at", "2016-07-27 20:12:39.567163"], ["updated_at", "2016-07-27 20:12:39.567163"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Cardinals"], ["city", "St. Louis"], ["logo_url", "/images/stlouis-cardinals.png"], ["stadium", "Busch Stadium"], ["created_at", "2016-07-27 20:12:39.569377"], ["updated_at", "2016-07-27 20:12:39.569377"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Blue Jays"], ["city", "Toronto"], ["logo_url", "/images/toronto-bluejays.png"], ["stadium", "Rogers Centre"], ["created_at", "2016-07-27 20:12:39.571726"], ["updated_at", "2016-07-27 20:12:39.571726"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Nationals"], ["city", "Washington"], ["logo_url", "/images/washington-nationals.png"], ["stadium", "Nationals Park"], ["created_at", "2016-07-27 20:12:39.574949"], ["updated_at", "2016-07-27 20:12:39.574949"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("name", "city", "logo_url", "stadium", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Braves"], ["city", "Atlanta"], ["logo_url", "/images/atlanta-braves.png"], ["stadium", "Turner Field"], ["created_at", "2016-07-27 20:12:39.578262"], ["updated_at", "2016-07-27 20:12:39.578262"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'tim@tim.com' LIMIT 1
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "tim@tim.com"], ["password_digest", "$2a$10$d8pqM/mbERE6UssHK4lb3umCFuudjUSFKKtOI.2hL/Mn2o25HQcai"], ["created_at", "2016-07-27 20:12:39.673187"], ["updated_at", "2016-07-27 20:12:39.673187"]]
+  [1m[35m (4.0ms)[0m  commit transaction
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Royals"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Angels"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Angels vs Royals"], ["full_name", "Angels vs Royals July 27, 2016 at  7:15pm"], ["home_team_id", 342], ["away_team_id", 344], ["start_time", "2016-07-28 00:15:00.000000"], ["created_at", "2016-07-27 20:12:40.879543"], ["updated_at", "2016-07-27 20:12:40.879543"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Brewers"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Diamondbacks"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Diamondbacks vs Brewers"], ["full_name", "Diamondbacks vs Brewers July 27, 2016 at  7:10pm"], ["home_team_id", 345], ["away_team_id", 331], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:12:40.883107"], ["updated_at", "2016-07-27 20:12:40.883107"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Twins"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Braves"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Braves vs Twins"], ["full_name", "Braves vs Twins July 27, 2016 at  7:10pm"], ["home_team_id", 346], ["away_team_id", 360], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:12:40.886340"], ["updated_at", "2016-07-27 20:12:40.886340"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Astros"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Yankees"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Yankees vs Astros"], ["full_name", "Yankees vs Astros July 27, 2016 at  7:10pm"], ["home_team_id", 340], ["away_team_id", 348], ["start_time", "2016-07-28 00:10:00.000000"], ["created_at", "2016-07-27 20:12:40.892621"], ["updated_at", "2016-07-27 20:12:40.892621"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Cubs"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "White Sox"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "White Sox vs Cubs"], ["full_name", "White Sox vs Cubs July 27, 2016 at  7:05pm"], ["home_team_id", 335], ["away_team_id", 334], ["start_time", "2016-07-28 00:05:00.000000"], ["created_at", "2016-07-27 20:12:40.896355"], ["updated_at", "2016-07-27 20:12:40.896355"]]
+  [1m[36m (3.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Rangers"]]
+  [1m[36mTeam Load (0.0ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Athletics"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Athletics vs Rangers"], ["full_name", "Athletics vs Rangers July 27, 2016 at  7:05pm"], ["home_team_id", 356], ["away_team_id", 350], ["start_time", "2016-07-28 00:05:00.000000"], ["created_at", "2016-07-27 20:12:40.902930"], ["updated_at", "2016-07-27 20:12:40.902930"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Mets"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Cardinals"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Cardinals vs Mets"], ["full_name", "Cardinals vs Mets July 27, 2016 at  7:10pm"], ["home_team_id", 347], ["away_team_id", 357], ["start_time", "2016-07-27 23:10:00.000000"], ["created_at", "2016-07-27 20:12:40.907031"], ["updated_at", "2016-07-27 20:12:40.907031"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mTeam Load (0.6ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Pirates"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Mariners"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Mariners vs Pirates"], ["full_name", "Mariners vs Pirates July 27, 2016 at  7:05pm"], ["home_team_id", 351], ["away_team_id", 352], ["start_time", "2016-07-27 23:05:00.000000"], ["created_at", "2016-07-27 20:12:40.916987"], ["updated_at", "2016-07-27 20:12:40.916987"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Orioles"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Rockies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["label", "Rockies vs Orioles"], ["full_name", "Rockies vs Orioles July 27, 2016 at  7:05pm"], ["home_team_id", 333], ["away_team_id", 339], ["start_time", "2016-07-27 23:05:00.000000"], ["created_at", "2016-07-27 20:12:40.920905"], ["updated_at", "2016-07-27 20:12:40.920905"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Reds vs Giants July 26, 2016 at  7:15pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Giants"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Reds"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Giants"]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Reds vs Giants"], ["full_name", "Reds vs Giants July 26, 2016 at  7:15pm"], ["home_team_id", 355], ["away_team_id", 337], ["start_time", "2016-07-27 02:15:00.000000"], ["home_team_score", 9], ["away_team_score", 7], ["finished", "t"], ["winning_team_id", 355], ["created_at", "2016-07-27 20:12:42.124482"], ["updated_at", "2016-07-27 20:12:42.124482"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Rays vs Dodgers July 26, 2016 at  7:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Dodgers"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Rays"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Dodgers"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Rays vs Dodgers"], ["full_name", "Rays vs Dodgers July 26, 2016 at  7:10pm"], ["home_team_id", 341], ["away_team_id", 354], ["start_time", "2016-07-27 02:10:00.000000"], ["home_team_score", 3], ["away_team_score", 2], ["finished", "t"], ["winning_team_id", 341], ["created_at", "2016-07-27 20:12:42.135933"], ["updated_at", "2016-07-27 20:12:42.135933"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Angels vs Royals July 26, 2016 at  7:15pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Royals"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Angels"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Angels"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Angels vs Royals"], ["full_name", "Angels vs Royals July 26, 2016 at  7:15pm"], ["home_team_id", 342], ["away_team_id", 344], ["start_time", "2016-07-27 00:15:00.000000"], ["home_team_score", 0], ["away_team_score", 13], ["finished", "t"], ["winning_team_id", 344], ["created_at", "2016-07-27 20:12:42.142637"], ["updated_at", "2016-07-27 20:12:42.142637"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Diamondbacks vs Brewers July 26, 2016 at  7:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Brewers"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Diamondbacks"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Brewers"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Diamondbacks vs Brewers"], ["full_name", "Diamondbacks vs Brewers July 26, 2016 at  7:10pm"], ["home_team_id", 345], ["away_team_id", 331], ["start_time", "2016-07-27 00:10:00.000000"], ["home_team_score", 9], ["away_team_score", 4], ["finished", "t"], ["winning_team_id", 345], ["created_at", "2016-07-27 20:12:42.146488"], ["updated_at", "2016-07-27 20:12:42.146488"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Braves vs Twins July 26, 2016 at  7:10pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Twins"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Braves"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Braves"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Braves vs Twins"], ["full_name", "Braves vs Twins July 26, 2016 at  7:10pm"], ["home_team_id", 346], ["away_team_id", 360], ["start_time", "2016-07-27 00:10:00.000000"], ["home_team_score", 0], ["away_team_score", 2], ["finished", "t"], ["winning_team_id", 360], ["created_at", "2016-07-27 20:12:42.150235"], ["updated_at", "2016-07-27 20:12:42.150235"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Yankees vs Astros July 26, 2016 at  7:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Astros"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Yankees"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Yankees"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Yankees vs Astros"], ["full_name", "Yankees vs Astros July 26, 2016 at  7:10pm"], ["home_team_id", 340], ["away_team_id", 348], ["start_time", "2016-07-27 00:10:00.000000"], ["home_team_score", 3], ["away_team_score", 6], ["finished", "t"], ["winning_team_id", 348], ["created_at", "2016-07-27 20:12:42.154986"], ["updated_at", "2016-07-27 20:12:42.154986"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Athletics vs Rangers July 26, 2016 at  7:05pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Rangers"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Athletics"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Athletics"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Athletics vs Rangers"], ["full_name", "Athletics vs Rangers July 26, 2016 at  7:05pm"], ["home_team_id", 356], ["away_team_id", 350], ["start_time", "2016-07-27 00:05:00.000000"], ["home_team_score", 3], ["away_team_score", 6], ["finished", "t"], ["winning_team_id", 350], ["created_at", "2016-07-27 20:12:42.159967"], ["updated_at", "2016-07-27 20:12:42.159967"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Cardinals vs Mets July 26, 2016 at  8:00pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mets"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Cardinals"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mets"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Cardinals vs Mets"], ["full_name", "Cardinals vs Mets July 26, 2016 at  8:00pm"], ["home_team_id", 347], ["away_team_id", 357], ["start_time", "2016-07-27 00:00:00.000000"], ["home_team_score", 3], ["away_team_score", 1], ["finished", "t"], ["winning_team_id", 347], ["created_at", "2016-07-27 20:12:42.164257"], ["updated_at", "2016-07-27 20:12:42.164257"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Cubs vs White Sox July 26, 2016 at  6:10pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "White Sox"]]
+  [1m[35mTeam Load (0.4ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Cubs"]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "White Sox"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Cubs vs White Sox"], ["full_name", "Cubs vs White Sox July 26, 2016 at  6:10pm"], ["home_team_id", 334], ["away_team_id", 335], ["start_time", "2016-07-26 23:10:00.000000"], ["home_team_score", 3], ["away_team_score", 0], ["finished", "t"], ["winning_team_id", 334], ["created_at", "2016-07-27 20:12:42.171079"], ["updated_at", "2016-07-27 20:12:42.171079"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Phillies vs Marlins July 26, 2016 at  7:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Marlins"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Phillies"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Marlins"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Phillies vs Marlins"], ["full_name", "Phillies vs Marlins July 26, 2016 at  7:10pm"], ["home_team_id", 343], ["away_team_id", 349], ["start_time", "2016-07-26 23:10:00.000000"], ["home_team_score", 5], ["away_team_score", 0], ["finished", "t"], ["winning_team_id", 343], ["created_at", "2016-07-27 20:12:42.189154"], ["updated_at", "2016-07-27 20:12:42.189154"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Nationals vs Indians July 26, 2016 at  7:10pm"]]
+  [1m[36mTeam Load (0.3ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Indians"]]
+  [1m[35mTeam Load (0.6ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Nationals"]]
+  [1m[36mTeam Load (0.8ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Indians"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Nationals vs Indians"], ["full_name", "Nationals vs Indians July 26, 2016 at  7:10pm"], ["home_team_id", 336], ["away_team_id", 359], ["start_time", "2016-07-26 23:10:00.000000"], ["home_team_score", 7], ["away_team_score", 6], ["finished", "t"], ["winning_team_id", 336], ["created_at", "2016-07-27 20:12:42.204037"], ["updated_at", "2016-07-27 20:12:42.204037"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Tigers vs Red Sox July 26, 2016 at  7:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Red Sox"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Tigers"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Tigers"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Tigers vs Red Sox"], ["full_name", "Tigers vs Red Sox July 26, 2016 at  7:10pm"], ["home_team_id", 332], ["away_team_id", 338], ["start_time", "2016-07-26 23:10:00.000000"], ["home_team_score", 8], ["away_team_score", 9], ["finished", "t"], ["winning_team_id", 338], ["created_at", "2016-07-27 20:12:42.211399"], ["updated_at", "2016-07-27 20:12:42.211399"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Padres vs Blue Jays July 26, 2016 at  7:07pm"]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Blue Jays"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Padres"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Blue Jays"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Padres vs Blue Jays"], ["full_name", "Padres vs Blue Jays July 26, 2016 at  7:07pm"], ["home_team_id", 358], ["away_team_id", 353], ["start_time", "2016-07-26 23:07:00.000000"], ["home_team_score", 7], ["away_team_score", 6], ["finished", "t"], ["winning_team_id", 358], ["created_at", "2016-07-27 20:12:42.217334"], ["updated_at", "2016-07-27 20:12:42.217334"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Mariners vs Pirates July 26, 2016 at  7:05pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Pirates"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Mariners"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mariners"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Mariners vs Pirates"], ["full_name", "Mariners vs Pirates July 26, 2016 at  7:05pm"], ["home_team_id", 351], ["away_team_id", 352], ["start_time", "2016-07-26 23:05:00.000000"], ["home_team_score", 4], ["away_team_score", 7], ["finished", "t"], ["winning_team_id", 352], ["created_at", "2016-07-27 20:12:42.222059"], ["updated_at", "2016-07-27 20:12:42.222059"]]
+  [1m[36m (3.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Rockies vs Orioles July 26, 2016 at  7:05pm"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Orioles"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Rockies"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Rockies"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["label", "Rockies vs Orioles"], ["full_name", "Rockies vs Orioles July 26, 2016 at  7:05pm"], ["home_team_id", 333], ["away_team_id", 339], ["start_time", "2016-07-26 23:05:00.000000"], ["home_team_score", 3], ["away_team_score", 6], ["finished", "t"], ["winning_team_id", 339], ["created_at", "2016-07-27 20:12:42.228984"], ["updated_at", "2016-07-27 20:12:42.228984"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Cardinals vs Mets July 26, 2016 at  4:10pm"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Mets"]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1[0m  [["name", "Cardinals"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."name" = ? LIMIT 1  [["name", "Cardinals"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "games" ("label", "full_name", "home_team_id", "away_team_id", "start_time", "home_team_score", "away_team_score", "finished", "winning_team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["label", "Cardinals vs Mets"], ["full_name", "Cardinals vs Mets July 26, 2016 at  4:10pm"], ["home_team_id", 347], ["away_team_id", 357], ["start_time", "2016-07-26 20:10:00.000000"], ["home_team_score", 2], ["away_team_score", 3], ["finished", "t"], ["winning_team_id", 357], ["created_at", "2016-07-27 20:12:42.232632"], ["updated_at", "2016-07-27 20:12:42.232632"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/game" for ::1 at 2016-07-27 13:12:55 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by GameController#index as HTML
+  [1m[35mGame Load (0.3ms)[0m  SELECT "games".* FROM "games" WHERE "games"."finished" = ?  [["finished", "f"]]
+  [1m[36mTeam Load (0.5ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 342]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 344]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 345]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 331]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 346]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 360]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 340]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 348]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 335]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 334]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 356]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 350]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 347]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 357]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 351]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 352]]
+  [1m[36mTeam Load (0.6ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 333]]
+  [1m[35mTeam Load (1.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 339]]
+  Rendered game/index.html.erb within layouts/application (79.8ms)
+Completed 200 OK in 502ms (Views: 461.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/public/css/stylesweb.css" for ::1 at 2016-07-27 13:12:57 -0700
+
+ActionController::RoutingError (No route matches [GET] "/public/css/stylesweb.css"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (153.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.1ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (79.9ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (193.7ms)
+
+
+Started GET "/assets/bet.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/request.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/game.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/managed_account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-27 13:12:57 -0700
+
+
+Started GET "/game" for ::1 at 2016-07-27 13:12:57 -0700
+Processing by GameController#index as HTML
+  [1m[36mGame Load (0.2ms)[0m  [1mSELECT "games".* FROM "games" WHERE "games"."finished" = ?[0m  [["finished", "f"]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 342]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 344]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 345]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 331]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 346]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 360]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 340]]
+  [1m[36mTeam Load (0.2ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 348]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 335]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 334]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 356]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 350]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 347]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 357]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 351]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 352]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 333]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 339]]
+  Rendered game/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 94ms (Views: 88.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/bet.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/game.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/card.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/managed_account.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/bet.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/game.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/managed_account.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/request.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/public/css/stylesweb.css" for ::1 at 2016-07-27 13:12:58 -0700
+
+ActionController::RoutingError (No route matches [GET] "/public/css/stylesweb.css"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (118.0ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (75.5ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (181.5ms)
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/bet.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/card.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/game.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/managed_account.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/request.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-07-27 13:12:58 -0700
+
+
+Started GET "/public/css/stylesweb.css" for ::1 at 2016-07-27 13:12:59 -0700
+
+ActionController::RoutingError (No route matches [GET] "/public/css/stylesweb.css"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.9ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/nopotatoes/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (147.7ms)
