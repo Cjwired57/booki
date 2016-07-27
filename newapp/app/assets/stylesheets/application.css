@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+.teamback {
+  height: 500px;
+  width: 900px;
+  background: pink;
+
+}
+
+nav {
+
+  background: black;
+}
