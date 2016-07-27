@@ -24297,3 +24297,43 @@ Processing by CardController#create as */*
   [1m[35m (1.6ms)[0m  commit transaction
   Rendered card/create.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 670ms (Views: 28.8ms | ActiveRecord: 2.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTeams (20160726232959)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (219.2ms)[0m  [1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "city" varchar, "logo_url" varchar, "stadium" varchar, "founded_in" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160726232959"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.5ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.9ms)[0m  DELETE FROM "games"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "games"
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'tim@tim.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "tim@tim.com"], ["password_digest", "$2a$10$UOvULiJyZ9Lc2AGrucjxQuFBWU2CYC7mtbYExzVAHfK2Ozd5JLNGS"], ["created_at", "2016-07-27 02:16:58.244066"], ["updated_at", "2016-07-27 02:16:58.244066"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "managed_accounts" ("user_id", "account_id", "secret_key", "publishable_key", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", 7], ["account_id", "acct_18bhbSFcWxjwUmQm"], ["secret_key", "sk_test_hSRAO4erj3CgfInvnnonq5gf"], ["publishable_key", "pk_test_PvUUpmUSYrImeoNEFviyNwxf"], ["created_at", "2016-07-27 02:17:00.746694"], ["updated_at", "2016-07-27 02:17:00.746694"]]
+  [1m[35m (7.6ms)[0m  commit transaction
+  [1m[36mGame Load (2.2ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Reds vs Giants July 25, 2016 at  7:15pm"]]
+  [1m[35mGame Load (0.6ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Angels vs Royals July 25, 2016 at  7:15pm"]]
+  [1m[36mGame Load (0.9ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Cubs vs White Sox July 25, 2016 at  7:10pm"]]
+  [1m[35mGame Load (0.2ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Yankees vs Astros July 25, 2016 at  7:10pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Athletics vs Rangers July 25, 2016 at  7:05pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Diamondbacks vs Brewers July 25, 2016 at  6:20pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Tigers vs Red Sox July 25, 2016 at  7:10pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Phillies vs Marlins July 25, 2016 at  7:10pm"]]
+  [1m[36mGame Load (0.1ms)[0m  [1mSELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1[0m  [["full_name", "Padres vs Blue Jays July 25, 2016 at  7:07pm"]]
+  [1m[35mGame Load (0.1ms)[0m  SELECT  "games".* FROM "games" WHERE "games"."full_name" = ? LIMIT 1  [["full_name", "Rockies vs Orioles July 25, 2016 at  7:05pm"]]

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726193326) do
+ActiveRecord::Schema.define(version: 20160726232959) do
 
   create_table "bets", force: :cascade do |t|
     t.integer  "request_id"
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 20160726193326) do
     t.float    "bet_amount"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "logo_url"
+    t.string   "stadium"
+    t.datetime "founded_in"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
