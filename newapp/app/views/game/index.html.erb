@@ -25,7 +25,7 @@
       <ul class="list nav navbar-nav">
         <li><%= link_to 'Home', root_path %> </li>
         <li><a href="/logout">Logout</a></li>
-        <li><%= link_to 'Teams', home_teams_path %></li>
+        <li><%= link_to 'Games', game_index_path %></li>
       </ul>
 
       </div>
@@ -41,7 +41,8 @@
 
         <div class="teamback">
             <div class="description-wrapper">
-             <p class="imgDescription"><%= game.full_name %></p>
+          <!--      <td><%= link_to  game.full_name, game_path(game) %></td> -->
+             <p class="imgDescription"><%=link_to game.full_name, game_path(game)  %></p>
             </div>
 
 
