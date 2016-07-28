@@ -38,17 +38,20 @@
         <% away_team = game.away_team %>
         <p class="teamtext"><%= game.label %></p>
 
-        <div class="jumbotron">
-           <div class="team">
-              <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
-           </div>
+        <div class="teamback">
+            <div class="description-wrapper">
+             <p class="imgDescription"><%= game.full_name %></p>
+            </div>
 
-             <div class="team">
-             </div>
 
-           <div class="team">
+                <div class="lteam">
+                  <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
+                </div>
+
+           <div class="rteam">
               <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
            </div>
+
         </div>
       </div>
     </div>
