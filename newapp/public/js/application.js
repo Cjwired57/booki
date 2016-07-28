@@ -13,6 +13,7 @@ $(document).ready(function() {
         console.log(response);
       })
    })
+
    $('#pick-home-team-button').on('click', function(event) {
       event.preventDefault();
 
@@ -38,7 +39,7 @@ $(document).ready(function() {
           url: '/request',
           data: data
         }).done(function(response){
-
+          console.log(response)
 
         })
 
