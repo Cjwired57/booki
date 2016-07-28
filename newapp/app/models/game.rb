@@ -11,11 +11,11 @@ class Game < ActiveRecord::Base
   validates :home_team_id, :away_team_id, :start_time, presence: true
 
   def self.current_games
-    Game.where(finished: true)
+    Game.where(finished: false)
   end
 
   def self.past_games
-    Game.where(finished: false)
+    Game.where(finished: true)
   end
 
 end
