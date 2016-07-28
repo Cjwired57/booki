@@ -36,7 +36,7 @@
     <% @current_games.each do |game|%>
         <% home_team = game.home_team %>
         <% away_team = game.away_team %>
-        <p class="teamtext"><%= game.label %></p>
+        <p></p>
 
         <div class="teamback">
             <div class="description-wrapper">
@@ -44,13 +44,13 @@
             </div>
 
 
-                <div class="lteam">
-                  <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
-                </div>
+            <div class="lteam">
+              <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
+            </div>
 
-           <div class="rteam">
+            <div class="rteam">
               <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
-           </div>
+            </div>
 
         </div>
       </div>

@@ -44,7 +44,7 @@ nav {
 
 .imgDescription {
   z-index: 5;
-  /*visibility: hidden;*/
+  visibility: hidden;
   position: absolute;
   border-radius: 8px;
     min-width: 75%;
@@ -52,8 +52,9 @@ nav {
    top: 2.5%;
    margin-left: 10%;
    margin-right: 10%;
-   background: pink;
 
+   margin-top: 10%;
+   margin-bottom: 10%;
 
 
 }
