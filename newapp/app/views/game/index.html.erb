@@ -28,7 +28,7 @@ body {
 
 
     <li><a href="/logout">Logout</a></li>
-       <li><%= link_to 'Teams', home_teams_path %></li>
+       <li><%= link_to 'Teams', team_index_path %></li>
   </ul>
   </div>
 </nav>
@@ -37,9 +37,9 @@ body {
       <h1 style="margin-top: 90px; text-align: center;">Today's Games</h1>
 
       <div class="container-fluid">
-      <% @games.each do |game|%>
-      <% home_team = Team.find(game.home_team_id) %>
-      <% away_team = Team.find(game.away_team_id) %>
+      <% @current_games.each do |game|%>
+      <% home_team = game.home_team %>
+      <% away_team = game.away_team %>
 
      <div class="row-fluid">
      <div class="col-sm-3 teampics">
