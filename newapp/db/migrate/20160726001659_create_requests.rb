@@ -3,6 +3,8 @@ class CreateRequests < ActiveRecord::Migration
     create_table :requests do |t|
       t.integer :owner_id
       t.integer :opponent_id
+      t.integer :owner_team_id
+      t.integer :opponent_team_id
       t.integer :game_id
       t.boolean :accepted
       t.float :bet_amount

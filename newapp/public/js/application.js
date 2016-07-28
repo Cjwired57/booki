@@ -13,7 +13,49 @@ $(document).ready(function() {
         console.log(response);
       })
    })
+   $('#pick-home-team-button').on('click', function(event) {
+      event.preventDefault();
 
+      // var homeTeamID = form hidden inputs
+      // var awayTeamID = same as above or something
+      // var gameID = the game's id
+      // var betAmount = get the bet amount.
+      // var userChoice = 'home' or 'away'
+      // var opponentEmail = get the email of the opponent? maybe a user should have a username. spitballing, but we should figure out how to send an actual request
+
+        var data = {
+          'home_team_id': homeTeamID,
+          'away_team_id': awayTeamID,
+          'user_choice': userChoice,
+          'game_id': gameID,
+          'opponentEmail': opponentEmail
+          'bet_amount': betAmount
+
+        }
+
+        $.ajax({
+          method: 'POST',
+          url: '/request',
+          data: data
+        }).done(function(response){
+
+
+        })
+
+
+
+
+
+   })
+   $('#pick-away-team-button').on('click', function(event) {
+      event.preventDefault();
+
+
+
+
+
+
+   })
    //    $('#payment-form').on('submit', function(event) {
 
    // })
@@ -132,5 +174,8 @@ function stripeDebitResponseHandler(status, response) {
 
   }
 };
+
+
+
 
 })
