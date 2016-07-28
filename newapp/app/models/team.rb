@@ -8,4 +8,9 @@ class Team < ActiveRecord::Base
   def games
     self.games_as_home_team + self.games_as_away_team
   end
+
+  def full_name
+    "#{self.city} #{self.name}"
+  end
+
 end
