@@ -8,6 +8,10 @@ class GameController < ApplicationController
     @teams = Team.all
   end
 
+  def show
+     @game = Game.find(params[:id])
+  end
+
   def create
 
     Stattleship.configure do |config|
