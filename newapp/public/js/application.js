@@ -1,21 +1,35 @@
 $(document).ready(function() {
 
-   $('#my_sign_up_form').on('submit', function(event) {
-     event.preventDefault();
-     var info = $(this).serialize();
+ $('body').on('submit','#my_sign_up_form', function(event) {
+   event.preventDefault();
+   var info = $(this).serialize();
+   debugger;
+   $.ajax({
+    type: 'POST',
+    url: '/user',
+    data: info
 
-      $.ajax({
-        type: 'POST',
-        url: '/user',
-        data: info
+  }).done(function(response) {
+    console.log(response);
+  })
+})
 
-      }).done(function(response) {
-        console.log(response);
-      })
-   })
+//  $('body').on('submit','#debit-payment-form', function(event) {
+//    event.preventDefault();
+//    var info = $(this).serialize();
+//    debugger;
+//    $.ajax({
+//     type: 'POST',
+//     url: '/user',
+//     data: info
 
-   $('#pick-home-team-button').on('click', function(event) {
-      event.preventDefault();
+//   }).done(function(response) {
+//     console.log(response);
+//   })
+// })
+
+ $('#pick-home-team-button').on('click', function(event) {
+  event.preventDefault();
 
       // var homeTeamID = form hidden inputs
       // var awayTeamID = same as above or something
@@ -24,39 +38,39 @@ $(document).ready(function() {
       // var userChoice = 'home' or 'away'
       // var opponentEmail = get the email of the opponent? maybe a user should have a username. spitballing, but we should figure out how to send an actual request
 
-        var data = {
-          'home_team_id': homeTeamID,
-          'away_team_id': awayTeamID,
-          'user_choice': userChoice,
-          'game_id': gameID,
-          'opponentEmail': opponentEmail
-          'bet_amount': betAmount
+      var data = {
+        'home_team_id': homeTeamID,
+        'away_team_id': awayTeamID,
+        'user_choice': userChoice,
+        'game_id': gameID,
+        'opponentEmail': opponentEmail,
+        'bet_amount': betAmount
 
-        }
+      }
 
-        $.ajax({
-          method: 'POST',
-          url: '/request',
-          data: data
-        }).done(function(response){
-          console.log(response)
+      $.ajax({
+        method: 'POST',
+        url: '/request',
+        data: data
+      }).done(function(response){
+        console.log(response)
 
-        })
-
-
-
-
-
-   })
-   $('#pick-away-team-button').on('click', function(event) {
-      event.preventDefault();
+      })
 
 
 
 
 
+    })
+ $('#pick-away-team-button').on('click', function(event) {
+  event.preventDefault();
 
-   })
+
+
+
+
+
+})
    //    $('#payment-form').on('submit', function(event) {
 
    // })
@@ -105,7 +119,7 @@ function stripeResponseHandler(status, response) {
   var $form = $('#payment-form');
 
     if (response.error) { // Problem!
-    console.log("wtf")
+      console.log("wtf")
     // Show the errors on the form:
     $form.find('.payment-errors').text(response.error.message);
     $form.find('.submit').prop('disabled', false); // Re-enable submission
@@ -123,16 +137,16 @@ function stripeResponseHandler(status, response) {
     // Submit the form:
     // $form.get(0).submit();
 
-     var info = $(this).serialize();
+    var info = $(this).serialize();
 
-      $.ajax({
-        type: 'POST',
-        url: '/card',
-        data: data
+    $.ajax({
+      type: 'POST',
+      url: '/card',
+      data: data
 
-      }).done(function(response) {
-        console.log(response);
-      })
+    }).done(function(response) {
+      console.log(response);
+    })
 
 
 
@@ -144,7 +158,7 @@ function stripeDebitResponseHandler(status, response) {
   var $form = $('#debit-payment-form');
 
     if (response.error) { // Problem!
-    console.log("wtf")
+      console.log("wtf")
     // Show the errors on the form:
     $form.find('.payment-errors').text(response.error.message);
     $form.find('.submit').prop('disabled', false); // Re-enable submission
@@ -162,14 +176,14 @@ function stripeDebitResponseHandler(status, response) {
     // Submit the form:
     // $form.get(0).submit();
 
-      $.ajax({
-        type: 'POST',
-        url: '/debit',
-        data: data
+    $.ajax({
+      type: 'POST',
+      url: '/debit',
+      data: data
 
-      }).done(function(response) {
-        console.log(response);
-      })
+    }).done(function(response) {
+      console.log(response);
+    })
 
 
 
