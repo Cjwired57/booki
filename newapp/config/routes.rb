@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'home/teams'
   get 'home/index'
 
+
+  get '/game/past' => 'game#past'
   # get '/login' => 'sessions#new'
   # post '/login' => 'sessions#create'
   # get '/logout' => 'sessions#destroy'
