@@ -2,7 +2,7 @@ require 'stattleship'
 require 'pp'
 require 'stripe'
 
-Stripe.api_key = "sk_test_LaGOwlDvqeTDlyYRBnWN1y4W"
+Stripe.api_key = ENV['STRIPE_API_SECRET_TEST']
 
 Game.delete_all
 User.delete_all

@@ -2,7 +2,10 @@
 * http://srobbin.com/jquery-plugins/backstretch/
 * Copyright (c) 2013 Scott Robbin; Licensed MIT */
 
-;(function ($, window, undefined) {
+
+// removed  semi-colon from beginning of line 7. not sure if that breaks anything.
+
+(function ($, window, undefined) {
   'use strict';
 
   /* PLUGIN DEFINITION
