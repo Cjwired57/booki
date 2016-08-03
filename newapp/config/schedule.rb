@@ -19,7 +19,8 @@
 
 
 every 1.day, :at => '6:00 am' do
-  runner "DatabaseManager.create_todays_games"
-  runner "DatabaseManager.update_yesterdays_games"
+  d = DatabaseManager.new
+  runner "d.create_todays_games"
+  runner "d.update_yesterdays_games"
 end
 # Learn more: http://github.com/javan/whenever
