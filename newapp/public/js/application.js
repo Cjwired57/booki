@@ -29,7 +29,7 @@ $(document).ready(function() {
           'away_team_id': awayTeamID,
           'user_choice': userChoice,
           'game_id': gameID,
-          'opponentEmail': opponentEmail
+          'opponentEmail': opponentEmail,
           'bet_amount': betAmount
 
         }
