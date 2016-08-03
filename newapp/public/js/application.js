@@ -38,7 +38,6 @@ $(document).ready(function() {
       // var userChoice = 'home' or 'away'
       // var opponentEmail = get the email of the opponent? maybe a user should have a username. spitballing, but we should figure out how to send an actual request
 
-<<<<<<< HEAD
         var data = {
           'home_team_id': homeTeamID,
           'away_team_id': awayTeamID,
