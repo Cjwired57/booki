@@ -9,9 +9,14 @@
 	  </div>
 
 	  <div class="modal-body">
-	   <%= form_for :request, url: '/request', :html => {:id => "my_sign_up_form"} do |f| %>
+	   <%= form_for :request, url: '/request', method: :post, :html => {:id => "new-request-form"} do |f| %>
 		  Amount in USD: <%= f.text_field :amount %> <br>
-		  Opponent: <%= f.password_field :opponent %> <br> <br>
+		  Opponent's Email: <%= f.text_field :opponent %> <br> <br>
+		  Select Team: <%= f.radio_button :team_choice, 'home_team', checked: true %>
+		  <%= label :team_choice_home_team, "Home Team (#{@game.home_team.name})" %>
+		  <%= f.radio_button :team_choice, 'away_team'%>
+		  <%= label :team_choice_away_team, "Away Team (#{@game.away_team.name})" %>
+
 		  <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Send</button>
 		<% end %>
 	  </div>
