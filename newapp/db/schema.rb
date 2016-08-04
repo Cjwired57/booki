@@ -56,9 +56,9 @@ ActiveRecord::Schema.define(version: 20160729174044) do
     t.integer  "opponent_team_id"
     t.integer  "game_id"
     t.boolean  "accepted"
-    t.float    "bet_amount"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.integer  "bet_amount_in_cents"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
   end
 
   create_table "teams", force: :cascade do |t|
