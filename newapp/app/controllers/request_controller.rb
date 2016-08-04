@@ -31,6 +31,8 @@ class RequestController < ApplicationController
         accepted: false,
         bet_amount: bet_amount
         )
+
+      redirect_to root_path
     else
       # lame non-ajax route
     end
