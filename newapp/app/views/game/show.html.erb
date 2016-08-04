@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/application.css">
+</head>
+<body>
+  <%= render 'requestmodal' %>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+
+      <ul class="list nav navbar-nav">
+        <li><%= link_to 'Home', root_path %> </li>
+        <li><a href="/logout">Logout</a></li>
+        <li><%= link_to 'Games', game_index_path %></li>
+      </ul>
+
+      </div>
+    </nav>
+
+
+	 <h1 style="margin-top: 90px; text-align: center;"><%= @game.away_team.name %> vs <%= @game.home_team.name %> </h1>
+
+
+
+	<div class="teamback">
+        <div class="description-wrapper">
+        <% home_team = @game.home_team%>
+        <% away_team = @game.away_team%>
+
+        </div>
+        <div class="lteam">
+          <img src=<%=@game.away_team.logo_url %> alt="" width="239px" height="200px"> <br>
+          <%= away_team.city %> <br>
+          <%= away_team.stadium %>
+          <%= away_team.founded_in %>
+
+        </div>
+
+        <div class="rteam">
+
+          <img src=<%=home_team.logo_url %> alt="" width="239px" height="200px"> <br>
+          <%= home_team.city %> <br>
+          <%= home_team.stadium %>
+          <%= home_team.founded_in %>
+        </div>
+    </div>
+	</div>
+<div style="text-align: center;">
+<div class="fullname">  <%= @game.full_name %> </div>
+ <div class="button"><%= link_to 'Place Bet Request', request_path, data: {toggle: "modal", target: "#request-modal"} %> </div> <br>
+</div>
+</body>
+</html>
