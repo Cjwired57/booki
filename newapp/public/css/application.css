@@ -52,11 +52,27 @@ nav {
    top: 2.5%;
    margin-left: 10%;
    margin-right: 10%;
-
    margin-top: 10%;
    margin-bottom: 10%;
+}
 
+.game-score{
+  color: blue;
+  font-size: 200%;
+  visibility: hidden;
+  position: absolute;
+  border-radius: 8px;
+  min-width: 75%;
+  text-align: center;
+  top: 2.5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 7%;
+  margin-bottom: 10%;
+}
 
+.teamback:hover .game-score {
+  visibility: visible;
 }
 
 .teamback:hover .imgDescription {
