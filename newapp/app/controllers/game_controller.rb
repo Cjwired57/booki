@@ -8,14 +8,19 @@ class GameController < ApplicationController
     @teams = Team.all
   end
 
+  def past
+    @past_games = Game.all - Game.current_games
+  end
+
   def show
      @game = Game.find(params[:id])
   end
 
-  def create
 
+
+  def create
     Stattleship.configure do |config|
-      config.api_token = '5faa60b51939bb1b58b5cc0594a2b12b'
+      config.api_token = ENV['STATTLESHIP_API_KEY']
     end
 
     # dir = File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib'))

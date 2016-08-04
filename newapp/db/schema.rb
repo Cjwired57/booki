@@ -11,11 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160726232959) do
+ActiveRecord::Schema.define(version: 20160729174044) do
 
   create_table "bets", force: :cascade do |t|
     t.integer  "request_id"
     t.integer  "winner_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "database_managers", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,11 +52,13 @@ ActiveRecord::Schema.define(version: 20160726232959) do
   create_table "requests", force: :cascade do |t|
     t.integer  "owner_id"
     t.integer  "opponent_id"
+    t.integer  "owner_team_id"
+    t.integer  "opponent_team_id"
     t.integer  "game_id"
     t.boolean  "accepted"
     t.float    "bet_amount"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "teams", force: :cascade do |t|

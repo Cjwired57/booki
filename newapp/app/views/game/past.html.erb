@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="css/application.css">
+  <link rel="stylesheet" href="/css/application.css">
 
   <style>
     body {
@@ -31,8 +31,8 @@
       </div>
     </nav>
 
-    <h1 style="margin-top: 90px; text-align: center;">Today's Games</h1>
-    <% @current_games.each do |game|%>
+    <h1 style="margin-top: 90px; text-align: center;">Past Games</h1>
+    <% @past_games.each do |game|%>
         <% home_team = game.home_team %>
         <% away_team = game.away_team %>
         <p></p>
