@@ -5,5 +5,5 @@ class Request < ActiveRecord::Base
   has_one :owner_team, class_name: 'Team'
   has_one :opponent_team, class_name: 'Team'
 
-  validates :owner_id, :game_id, :opponent_id, :bet_amount, presence: true
+  validates :owner_id, :game_id, :opponent_id, :bet_amount_in_cents, presence: true
 end
