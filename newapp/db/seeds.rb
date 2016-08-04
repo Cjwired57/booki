@@ -189,6 +189,7 @@ Team.create(
   stadium: "Turner Field"
   )
 u = User.create(email: 'tim@tim.com', password: 'timtim')
+u2 = User.create(email: 'tom@tom.com', password: 'tomtom')
 # User.create(email: 'tom@tom.com', password: 'tomtom')
 
 # acct = Stripe::Account.create(

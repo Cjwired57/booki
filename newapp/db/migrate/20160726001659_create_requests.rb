@@ -7,7 +7,7 @@ class CreateRequests < ActiveRecord::Migration
       t.integer :opponent_team_id
       t.integer :game_id
       t.boolean :accepted
-      t.float :bet_amount
+      t.integer :bet_amount_in_cents
 
       t.timestamps null: false
     end
