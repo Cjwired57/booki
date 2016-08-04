@@ -31,7 +31,7 @@
       </div>
     </nav>
 
-    <h1 style="margin-top: 90px; text-align: center;">Past Games</h1>
+    <h1 style="margin-top: 90px; text-align: center;">Yesterday's Games</h1>
     <% @past_games.each do |game|%>
         <% home_team = game.home_team %>
         <% away_team = game.away_team %>
@@ -43,16 +43,24 @@
             <div class="description-wrapper">
           <!--      <td><%= link_to  game.full_name, game_path(game) %></td> -->
              <p class="imgDescription"><%=link_to game.full_name, game_path(game)  %></p>
+             <p class="game-score"><%= game.away_team_score %> - <%= game.home_team_score %></p>
             </div>
 
 
 
-            <div class="lteam">
+<!--             <div class="lteam">
               <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
             </div>
 
             <div class="rteam">
               <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
+            </div> -->
+            <div class="lteam">
+              <img src=<%= away_team.logo_url%> alt="" height="200px">
+            </div>
+
+            <div class="rteam">
+              <img src=<%= home_team.logo_url%> alt="" height="200px">
             </div>
 
         </div>
