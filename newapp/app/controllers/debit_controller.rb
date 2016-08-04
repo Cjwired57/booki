@@ -12,8 +12,12 @@ class DebitController < ApplicationController
 
       account.external_accounts.create(external_account: token)
 
+      p "*" * 50
+      p "success"
+      redirect_to root_path
     else
-
+      p "*" * 50
+      p "failure"
     end
   end
 

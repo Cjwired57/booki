@@ -33,7 +33,8 @@ class CardController < ApplicationController
     #   currency: 'usd',
     #   customer: @user.customer_id)
 
-redirect_to root_path
-end
+    redirect_to root_path
+    end
 
+  end
 end
