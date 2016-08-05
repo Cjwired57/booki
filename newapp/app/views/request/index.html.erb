@@ -58,7 +58,13 @@
                 <%if request.accepted %>
                   <p>Accepted</p>
                   <% else %>
-                  <button>Click to Accept</button>
+
+
+<td><%= button_to 'Click to Accept', {:controller => "bet", :action => "create", :request_id => request.id}, :method=>:post  %></td>
+
+
+
+
                 <% end %>
 
                 <% if current_user.requests.length == 0 %>
