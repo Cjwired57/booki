@@ -24,8 +24,10 @@
 
       <ul class="list nav navbar-nav">
         <li><%= link_to 'Home', root_path %> </li>
-        <li><a href="/logout">Logout</a></li>
+        <li><%= link_to "Log out", session_path, :method => :delete %></li>
         <li><%= link_to 'Games', game_index_path %></li>
+        <li><%= link_to 'My Requests', request_index_path %></li>
+        <li> <%= link_to 'Bets', bet_index_path %> </li>
       </ul>
 
       </div>

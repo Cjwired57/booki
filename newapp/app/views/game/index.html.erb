@@ -19,6 +19,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
 
@@ -26,6 +27,7 @@
         <li><%= link_to 'Home', root_path %> </li>
         <li><a href="/logout">Logout</a></li>
         <li><%= link_to 'Games', game_index_path %></li>
+        <li><%= link_to 'My Requests', request_index_path %></li>
       </ul>
 
       </div>
@@ -44,8 +46,6 @@
           <!--      <td><%= link_to  game.full_name, game_path(game) %></td> -->
              <p class="imgDescription"><%=link_to game.full_name, game_path(game)  %></p>
             </div>
-
-
 
             <div class="lteam">
               <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">

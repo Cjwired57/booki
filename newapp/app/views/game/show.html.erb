@@ -19,12 +19,16 @@
         <li><%= link_to 'Home', root_path %> </li>
         <li><a href="/logout">Logout</a></li>
         <li><%= link_to 'Games', game_index_path %></li>
+        <li><%= link_to 'My Requests', request_index_path %></li>
       </ul>
 
       </div>
     </nav>
-
-
+    <div style="margin-top: 200px">
+    <% if flash[:danger] %>
+      <div style="color: black;"><%= flash[:danger] %></div>
+    <% end %>
+    </div>
 	 <h1 style="margin-top: 90px; text-align: center;"><%= @game.away_team.name %> vs <%= @game.home_team.name %> </h1>
 
 

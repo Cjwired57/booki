@@ -1,5 +1,9 @@
 class RequestController < ApplicationController
 
+  def index
+    @teams = Team.all
+    @user = current_user
+  end
 
 
   def create
@@ -19,9 +23,7 @@ class RequestController < ApplicationController
 
       game = Game.find(game_id)
 
-
       home_team_id = Team.find(game.home_team_id).id
-
       away_team_id = Team.find(game.away_team_id).id
 
       if user_choice == 'home_team'
@@ -35,7 +37,7 @@ class RequestController < ApplicationController
       opponent = User.find_by(email: opponent_email)
 
       if opponent
-        request = Request.create(
+        request = Request.new(
           owner_id: current_user.id,
           opponent_id: opponent.id,
           owner_team_id: user_choice_id,
@@ -44,18 +46,23 @@ class RequestController < ApplicationController
           accepted: false,
           bet_amount_in_cents: bet_amount_in_cents
           )
-        p request
-        redirect_to root_path
-      else
+         if request.save
+          p request
+          redirect_to root_path
+         else
+         flash[:danger] = "You have already placed a bet on this game with this opponent"
         p '*'*50
         p 'there was a problem finding your opponent'
         redirect_to "/game/#{game_id}"
+        end
       end
     # else
     #   # lame non-ajax route
     #   p 'someone hit the other route'
     # end
   end
+
+
 
 
 end

@@ -190,6 +190,8 @@ Team.create(
   )
 u = User.create(email: 'tim@tim.com', password: 'timtim')
 u2 = User.create(email: 'tom@tom.com', password: 'tomtom')
+u3 = User.create(email: 'bob@bob.com', password: 'bobbob')
+
 # User.create(email: 'tom@tom.com', password: 'tomtom')
 
 # acct = Stripe::Account.create(

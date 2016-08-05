@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/application.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+      <ul class="list nav navbar-nav">
+        <li><%= link_to 'Home', root_path %> </li>
+        <li><%= link_to "Log out", session_path, :method => :delete %></li>
+        <li><%= link_to 'Games', game_index_path %></li>
+        <li><%= link_to 'My Requests', request_index_path %></li>
+        <li> <%= link_to 'Bets', bet_index_path %> </li>
+
+      </ul>
+  </nav>
+
+
+  <div class="row">
+    <h1 style="margin-top: 90px; text-align: center; display: block;">Requests Received</h1>
+      <% if @user.requests.length > 0 %>
+        <%@user.requests.each do |request| %>
+           <% if request.opponent_id == @user.id %>
+              <section class="bet col-md-4 col-sm-6 col-xs-12">
+                <h2>
+                  <strong>
+                    <%=User.find(request.owner_id).email%> wants to Wager
+                  </strong>
+                </h2>
+
+                <h3> $<%='%.2f' % (request.bet_amount_in_cents/100.0)%> </h3>
+
+                <%=request.owner_id %>
+                <%=request.opponent_id %>
+                <%=Game.find(request.game_id).full_name %>
+                <br><br>
+                <h4>Your team</h4>
+
+                <%= Team.find(request.opponent_team_id).name %>
+
+                <br><br>
+                <h4><%= User.find(request.owner_id).email%>'s Team</h4>
+
+                <%= Team.find(request.owner_team_id).name%>
+                <br><br>
+                <h4>Status</h4>
+
+                <%if request.accepted %>
+                  <p>Accepted</p>
+                  <% else %>
+                <td>
+                  <%= button_to 'Click to Accept', {:controller => "bet", :action => "create", :request_id => request.id}, :method=>:post  %>
+                </td>
+                <% end %>
+
+                <% if @user.requests.length == 0 %>
+                  <h3 style="margin-top: 90px; text-align: center; display: block; color: green;">No requests quite yet!</h3>
+                <% end %>
+                </section>
+          <% end %>
+        <% end %>
+      <% end %>
+ </div>
+
+
+
+
+  <h1 style="margin-top: 90px; text-align: center;">Requests Sent</h1>
+
+  <% if @user.requests.length > 0 %>
+    <%@user.requests.each do |request| %>
+      <% if request.owner_id == @user.id %>
+        <section class="bet col-md-4 col-sm-6 col-xs-12">
+        <h2> <strong>Wager</strong> <br>  </h2>
+
+        <h3> $<%='%.2f' % (request.bet_amount_in_cents/100.0)%> </h3>
+
+        <%=request.owner_id %>
+        <%=request.opponent_id %>
+        <%=Game.find(request.game_id).full_name %>
+        <br><br>
+        <h4>Your team</h4>
+
+        <%= Team.find(request.owner_team_id).name %>
+
+        <br><br>
+        <h4><%= User.find(request.opponent_id).email%>'s Team</h4>
+
+        <%= Team.find(request.opponent_team_id).name%>
+        <br><br>
+        <h4>Status</h4>
+
+        <%if request.accepted %>
+          <p>Accepted</p>
+          <% else %>
+          <p>Pending</p>
+        <% end %>
+      </section>
+    <% end %>
+  <% end %>
+<% else %>
+  <h3 class="centertext">You havent sent any wager requests</h3>
+  <div class="centertext">
+    <button>
+      <%= link_to 'Send Wager Requests', game_index_path %>
+    </button>
+  </div>
+<% end %>
+
+
+
+
+</body>
+</html>

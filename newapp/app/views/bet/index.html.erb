@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/application.css">
+</head>
+<body>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+
+      <ul class="list nav navbar-nav">
+        <li><%= link_to 'Home', root_path %> </li>
+        <li><%= link_to "Log out", session_path, :method => :delete %></li>
+        <li><%= link_to 'Games', game_index_path %></li>
+        <li><%= link_to 'My Requests', request_index_path %></li>
+          <li> <%= link_to 'Bets', bet_index_path %> </li>
+      </ul>
+
+
+  </nav>
+
+  <h1 style="margin-top: 90px; text-align: center;">Bets</h1>
+
+
+<div class="row">
+  <% @bets.each do |bet| %>
+    <% if bet.request %>
+      <% if bet.request.owner_id == @user.id || bet.request.opponent_id == @user.id  %>
+        <section class="bet col-md-4 col-sm-6 col-xs-12">
+          <% if bet.winner_id == nil %>
+            <p>This bet is in progress </p>
+          <% else %>
+            <p> YOU WON! </p>
+          <% end %>
+            <h3> $<%='%.2f' % (bet.request.bet_amount_in_cents/100.0)%> </h3>
+            <%=bet.request.owner_id %>
+            <%=bet.request.opponent_id %>
+
+            <%=Game.find(bet.request.game_id).full_name %>
+            <br><br>
+
+            <h4>Your team</h4>
+            <% if bet.request.owner_id == @user.id %>
+              <%= Team.find(bet.request.owner_team_id).name %>
+              <h4><%= User.find(bet.request.opponent_id).email%>'s Team</h4>
+              <%= Team.find(bet.request.opponent_team_id).name%>
+              <br><br>
+            <% else %>
+              <%= Team.find(bet.request.opponent_team_id).name %>
+              <h4><%= User.find(bet.request.owner_id).email%>'s Team</h4>
+              <%= Team.find(bet.request.owner_team_id).name%>
+              <br><br>
+            <% end %>
+            <% else %>
+            <p> you don't have any bets </p>
+         <% end %>
+       </section>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
