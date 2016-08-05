@@ -1,5 +1,8 @@
 class RequestController < ApplicationController
 
+  def index
+    @teams = Team.all
+  end
 
 
   def create
@@ -56,6 +59,8 @@ class RequestController < ApplicationController
     #   p 'someone hit the other route'
     # end
   end
+
+
 
 
 end

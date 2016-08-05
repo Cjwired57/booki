@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/application.css">
+</head>
+<body>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+
+
+      <ul class="list nav navbar-nav">
+        <li><%= link_to 'Home', root_path %> </li>
+        <li><a href="/logout">Logout</a></li>
+        <li><%= link_to 'Games', game_index_path %></li>
+      </ul>
+
+
+  </nav>
+
+  <h1 style="margin-top: 90px; text-align: center;"><%=current_user.email %>'s Requests</h1>
+
+  <%current_user.requests.each do |request|  %>
+
+  <section class="bet col-md-4 col-sm-6 col-xs-12">
+  <h2> <strong>Wager</strong> <br>  </h2>
+  <h3> $<%='%.2f' % (request.bet_amount_in_cents/100.0)%> </h3>
+
+
+
+
+    <%=request.owner_id %>
+    <%=request.opponent_id %>
+    <%=Game.find(request.game_id).full_name %>
+    <br><br>
+    <h4>Your team</h4>
+
+
+    <%= Team.find(request.owner_team_id).name %>
+
+    <br><br>
+    <h4>Opponent's Team</h4>
+
+    <%= Team.find(request.opponent_team_id).name%>
+    <br><br>
+    Status
+    <br>
+
+    <%if request.accepted %>
+      <p>Accepted</p>
+      <% else %>
+      <p>Pending</p>
+    <% end %>
+
+  </section>
+<% end %>
+
+</body>
+</html>
