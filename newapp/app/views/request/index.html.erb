@@ -25,40 +25,92 @@
 
   </nav>
 
-  <h1 style="margin-top: 90px; text-align: center;"><%=current_user.email %>'s Requests</h1>
 
-  <%current_user.requests.each do |request|  %>
+  <div class="row">
+  <h1 style="margin-top: 90px; text-align: center; display: block;">Requests Received</h1>
+
+  <% if Request.find_by(opponent_id: current_user.id) %>
+  <% received_request = Request.find_by(opponent_id: current_user.id)    %>
 
   <section class="bet col-md-4 col-sm-6 col-xs-12">
-  <h2> <strong>Wager</strong> <br>  </h2>
-  <h3> $<%='%.2f' % (request.bet_amount_in_cents/100.0)%> </h3>
+  <h2> <strong><%=User.find(received_request.owner_id).email%> wants to Wager</strong> <br>  </h2>
 
+  <h3> $<%='%.2f' % (received_request.bet_amount_in_cents/100.0)%> </h3>
 
-
-
-    <%=request.owner_id %>
-    <%=request.opponent_id %>
-    <%=Game.find(request.game_id).full_name %>
+    <%=received_request.owner_id %>
+    <%=received_request.opponent_id %>
+    <%=Game.find(received_request.game_id).full_name %>
     <br><br>
     <h4>Your team</h4>
 
-    <%= Team.find(request.owner_team_id).name %>
+    <%= Team.find(received_request.opponent_team_id).name %>
 
     <br><br>
-    <h4><%= User.find(request.opponent_id).email%>'s Team</h4>
+    <h4><%= User.find(received_request.opponent_id).email%>'s Team</h4>
 
-    <%= Team.find(request.opponent_team_id).name%>
+    <%= Team.find(received_request.owner_team_id).name%>
     <br><br>
     <h4>Status</h4>
 
-    <%if request.accepted %>
+    <%if received_request.accepted %>
       <p>Accepted</p>
       <% else %>
-      <p>Pending</p>
+      <button>Click to Accept</button>
     <% end %>
 
   </section>
+    <% else %>
+    <h3 style="margin-top: 90px; text-align: center; display: block; color: green;">No requests quite yet!</h3>
+    <% end %>
+  </div>
+
+
+
+
+
+
+  <h1 style="margin-top: 90px; text-align: center;">Requests Sent</h1>
+
+  <% if current_user.requests.length > 0 %>
+    <%current_user.requests.each do |request|  %>
+
+      <section class="bet col-md-4 col-sm-6 col-xs-12">
+      <h2> <strong>Wager</strong> <br>  </h2>
+
+      <h3> $<%='%.2f' % (request.bet_amount_in_cents/100.0)%> </h3>
+
+      <%=request.owner_id %>
+      <%=request.opponent_id %>
+      <%=Game.find(request.game_id).full_name %>
+      <br><br>
+      <h4>Your team</h4>
+
+      <%= Team.find(request.owner_team_id).name %>
+
+      <br><br>
+      <h4><%= User.find(request.opponent_id).email%>'s Team</h4>
+
+      <%= Team.find(request.opponent_team_id).name%>
+      <br><br>
+      <h4>Status</h4>
+
+      <%if request.accepted %>
+        <p>Accepted</p>
+        <% else %>
+        <p>Pending</p>
+      <% end %>
+    </section>
+  <% end %>
+<% else %>
+
+    <h3 class="centertext">You havent sent any wager requests</h3>
+
+    <div class="centertext"><button> <%= link_to 'Send Wager Requests', game_index_path %></button></div>
+
 <% end %>
+
+
+
 
 </body>
 </html>
