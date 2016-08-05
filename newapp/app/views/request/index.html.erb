@@ -19,6 +19,7 @@
         <li><%= link_to 'Home', root_path %> </li>
         <li><a href="/logout">Logout</a></li>
         <li><%= link_to 'Games', game_index_path %></li>
+        <li><%= link_to 'My Requests', request_index_path %></li>
       </ul>
 
 
@@ -41,16 +42,14 @@
     <br><br>
     <h4>Your team</h4>
 
-
     <%= Team.find(request.owner_team_id).name %>
 
     <br><br>
-    <h4>Opponent's Team</h4>
+    <h4><%= User.find(request.opponent_id).email%>'s Team</h4>
 
     <%= Team.find(request.opponent_team_id).name%>
     <br><br>
-    Status
-    <br>
+    <h4>Status</h4>
 
     <%if request.accepted %>
       <p>Accepted</p>

@@ -1,4 +1,7 @@
 class Request < ActiveRecord::Base
+
+  validates :owner_id, uniqueness: {scope: [:opponent_id, :game_id]}
+
   belongs_to :owner, class_name: 'User'
   belongs_to :opponent, class_name: 'User'
   belongs_to :game
