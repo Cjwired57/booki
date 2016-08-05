@@ -49,7 +49,7 @@
                 <%= Team.find(request.opponent_team_id).name %>
 
                 <br><br>
-                <h4><%= User.find(request.opponent_id).email%>'s Team</h4>
+                <h4><%= User.find(request.owner_id).email%>'s Team</h4>
 
                 <%= Team.find(request.owner_team_id).name%>
                 <br><br>
@@ -60,11 +60,9 @@
                   <% else %>
 
 
-<td><%= button_to 'Click to Accept', {:controller => "bet", :action => "create", :request_id => request.id}, :method=>:post  %></td>
-
-
-
-
+                <td>
+                  <%= button_to 'Click to Accept', {:controller => "bet", :action => "create", :request_id => request.id}, :method=>:post  %>
+                </td>
                 <% end %>
 
                 <% if current_user.requests.length == 0 %>

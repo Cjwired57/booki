@@ -1,4 +1,11 @@
 class BetController < ApplicationController
+
+	def index
+		@user = current_user
+		@games = Game.all
+    	@bets = Bet.all
+  	end
+
 	def create
 		p "you hit the bet post"
 		Bet.create(request_id: params[:request_id])
