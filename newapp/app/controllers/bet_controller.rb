@@ -12,7 +12,6 @@ class BetController < ApplicationController
 	def create
 		p "you hit the bet post"
 
-
 		Bet.create(request_id: params[:request_id])
 		request = Request.find(params[:request_id])
 		request.accepted = true
@@ -26,17 +25,15 @@ class BetController < ApplicationController
 	      amount: @bet_amount,
 	      currency: 'usd',
 	      customer: @owner.customer_id
-      )
+      	)
 
 		Stripe::Charge.create(
 	      amount: @bet_amount,
 	      currency: 'usd',
 	      customer: @opponent.customer_id
-      )
+      	)
 
 		redirect_to request_index_path
 	end
-      # t.integer :request_id
-      # t.integer :winner_id
 
 end
