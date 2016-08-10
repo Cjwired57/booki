@@ -188,9 +188,9 @@ Team.create(
   logo_url: "/images/atlanta-braves.png",
   stadium: "Turner Field"
   )
-u = User.create(email: 'tim@tim.com', password: 'timtim')
-u2 = User.create(email: 'tom@tom.com', password: 'tomtom')
-u3 = User.create(email: 'bob@bob.com', password: 'bobbob')
+u = User.create(email: 'tim@tim.com', password: 'timtim', customer_id: "cus_8y0sguEG4lIpmB")
+u2 = User.create(email: 'tom@tom.com', password: 'tomtom', customer_id: "cus_8y0ux9Swjcv5TO")
+u3 = User.create(email: 'bob@bob.com', password: 'bobbob', customer_id: "cus_8y0unxHQAgsTR7")
 
 # User.create(email: 'tom@tom.com', password: 'tomtom')
 
