@@ -58,16 +58,17 @@ main {
   margin-right: auto;
 }
 
-#home-buttons {
-  margin-left: 5%;
+.green-button {
+  display:inline-block;
+  margin-right: 200px;
 }
 
-#upcoming-games {
-  margin-right: 5%;
-}
+.button-container {
+  position: relative;
+    width:700px;
+  margin-left:auto;
+  margin-right: auto;
 
-#current-bets {
-  margin-right: 5%;
 }
 
 .baseball {
