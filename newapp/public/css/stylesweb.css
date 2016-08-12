@@ -1,24 +1,21 @@
 body {
   background-color: black;
-
   font-family: 'Raleway', sans-serif;
 }
 
 .fa-book {
-      margin-left: 370px;
-
+   margin-left: 370px;
    color: white;
    opacity: 0.8;
 }
 strong {
-    font-size: 7em;
-    letter-spacing: .3em;
-   opacity: 0.8;
-   margin-left: 200px;
-
-   color: white;
-
+  font-size: 7em;
+  letter-spacing: .3em;
+  opacity: 0.8;
+  margin-left: 200px;
+  color: white;
 }
+
 .movenav {
 top: 0;
 }
@@ -30,16 +27,16 @@ top: 0;
 
 .teamtext {
   border-bottom: 1px solid #FFFFFF;
-   font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 
 }
 
 
 .headline {
   color: white;
-    opacity: 0.9;
-    font-weight: bold;
-     font-family: 'Raleway', sans-serif;
+  opacity: 0.9;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
 }
 h2 {
    text-align: center;
@@ -49,7 +46,6 @@ h2 {
 }
 
 main {
-
   background: rgba(0, 0, 0, .4);
   padding-top: 30px;
   margin-top: 100px ;
@@ -65,17 +61,16 @@ main {
 
 .button-container {
   position: relative;
-    width:700px;
+  width:700px;
   margin-left:auto;
   margin-right: auto;
-
 }
 
 .baseball {
   height: 350px;
-   border-radius: 5px;
-   color: #0E8DE3;
-    background: #F3F9FE;
+  border-radius: 5px;
+  color: #0E8DE3;
+  background: #F3F9FE;
   display:inline-block;
   width: 45%;
   vertical-align:text-top;
@@ -100,7 +95,6 @@ main {
   border-radius: 5px;
   border: 1px solid #56BC8A;
   background:  rgba(0, 0, 0, .4);;
-
   margin-left: auto;
   margin-right: auto;
   height: 40px;
@@ -112,9 +106,8 @@ main {
 .button a {
   color: #56BC8A;
   font-size: 18px;
-   margin-left: 12px;
+  margin-left: 12px;
   font-weight: bold;
-
   font-family: 'Raleway', sans-serif;
 }
 
@@ -123,8 +116,7 @@ main {
 }
 
 .teampics {
-width: 300px;
-
+  width: 300px;
 }
 /*
 @media screen and (max-width: 700px) {
