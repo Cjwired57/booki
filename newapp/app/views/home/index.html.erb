@@ -35,7 +35,8 @@
       <main>
         <div class="movenav container">
           <% if current_user %>
-          <div class="headline auth"> Signed in as <%= current_user.email %> |  <%= link_to "Log out", session_path, :method => :delete %> </div>
+          <div class="headline auth"> Signed in as <%= current_user.email %> |  <%= link_to "Log out", session_path, :method => :delete %>
+          </div>
           <% else %>
           <div class="headline auth"><%= link_to 'Login',  '/session/new', data: {toggle: "modal", target: "#login-modal"} %> |
             <a href="#" data-toggle="modal" data-target="#test-modal">Sign Up</a>
@@ -48,33 +49,26 @@
 
             <%= render 'modal' %>
 
-          </div> <br> <br>
-
-
+          </div>
+          <br><br>
 
           <i class="fa fa-book fa-5x" aria-hidden="true"></i> <br>
           <strong>BOOKi</strong>
           <h2 class="headline">Place wagers on the latest sporting events</h2><br>
 
           <% if current_user  %>
-
-
-          <div class="container" id="home-buttons">
-            <div class="row text-center">
-             <div class="col-md-2 button" id="upcoming-games"><%= link_to 'Upcoming Games', game_index_path %>
-             </div>
-             <div class="col-md-2 button" id="past-games"><%= link_to 'Past Games', game_past_path %>
-             </div>
-             <div class="col-md-2 button" id="current-bets"><%= link_to 'Bets', bet_index_path %>
-             </div>
-             <div class="col-md-2 button" id="pending-bets"><%= link_to 'Requests', request_index_path %>
-             </div>
-           </div>
-           <br> <br>
-         </div>
-
-         <% end  %>
-
+            <div class="button-container">
+              <div class="button green-button"><%= link_to 'Todays Games', game_index_path %>
+              </div>
+              <div class="button green-button"><%= link_to 'Past Games', game_past_path %>
+              </div>
+              <div class="button green-button"><%= link_to 'Wagers', bet_index_path %>
+              </div>
+              <div class="button green-button"><%= link_to 'Requests', request_index_path %>
+              </div>
+              <br><br>
+            </div>
+          <% end %>
        </main>
 
        <script>
