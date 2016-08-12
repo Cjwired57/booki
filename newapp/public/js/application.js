@@ -14,6 +14,7 @@ $(document).ready(function() {
   })
 })
 
+
 //  $('body').on('submit','#debit-payment-form', function(event) {
 //    event.preventDefault();
 //    var info = $(this).serialize();

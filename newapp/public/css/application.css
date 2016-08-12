@@ -1,15 +1,4 @@
-.teamback {
-  height: 230px;
-  min-width: 90%;
-  background: #EEEEEE;
-  position: relative;
-  border-radius: 15px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  z-index: 3;
-  text-align: center;
-}
+
 
 /* {
   border: 1px solid green;
@@ -101,11 +90,9 @@ nav {
 }
 
 img {
-display: block;
-margin-left: auto;
-margin-right: auto;
-
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .fullname {
@@ -129,4 +116,13 @@ margin-right: auto;
   display: block;
   color: green;
 }
+
+/*@media (max-width: 700px) {
+  .col-md-4 {
+    width: 100%;
+    background: green;
+  }
+}
+
+*/
 
