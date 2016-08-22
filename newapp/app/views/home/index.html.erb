@@ -35,12 +35,12 @@
       <main>
         <div class="movenav container">
           <% if current_user %>
-          <div class="headline auth"> Signed in as <%= current_user.email %> |  <%= link_to "Log out", session_path, :method => :delete %>
+          <div class="headline auth"> Signed in as <%= current_user.email %> |  <%= link_to "Log Out", session_path, :method => :delete %>
           </div>
           <% else %>
           <div class="headline auth"><%= link_to 'Login',  '/session/new', data: {toggle: "modal", target: "#login-modal"} %> |
             <a href="#" data-toggle="modal" data-target="#test-modal">Sign Up</a>
-            <!--  <%= link_to 'Signup', '/user/new', data: {toggle: "modal", target: "#test-modal"}  %> --> </div>
+            <!--  <%= link_to 'Sign Up', '/user/new', data: {toggle: "modal", target: "#test-modal"}  %> --> </div>
             <% end %>
 
             <% if flash[:danger] %>
