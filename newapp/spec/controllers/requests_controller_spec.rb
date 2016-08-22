@@ -21,18 +21,8 @@ RSpec.describe RequestController, type: :controller do
 	    accepted: true
     	)
     }
-    let(:user) { User.create(
-	    id: 25,
-	    email: Faker::Internet.email,
-	    password_digest: Faker::Internet.password
-    	)
-    }
 
 	context '#index' do
-		before(:each) do
-
-		end
-
 		context 'with no requests made' do
 			it 'renders index view' do
 				get :index, {}, {}
@@ -42,18 +32,14 @@ RSpec.describe RequestController, type: :controller do
 			it 'assigns requests' do
 				@first = :request1
 				@second = :request2
-
 			    get :index
-
 				expect(assigns[:requests]).to eq [@first, @second]
 			end
 
 			it "returns http success" do
      			get :index
-
     			expect(response).to have_http_status(:success)
     		end
 		end
 	end
-
 end
