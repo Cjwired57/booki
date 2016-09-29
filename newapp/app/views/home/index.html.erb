@@ -3,52 +3,83 @@
 <head>
   <title>Bookie</title>
 
-    <link rel="stylesheet" href="css/stylesweb.css">
+  <link rel="stylesheet" href="css/stylesweb.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="js/backstretch.js"></script>
-  <script src="js/application.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<style>
-  body {
-  background-color: black;
+  <script type="text/javascript">
+  Stripe.setPublishableKey('pk_test_1hu9TpDcLROmA57xB1jwxWNA');
+      //this is a fake key for testing purposes
+      </script>
 
-}
-</style>
+      <script src="js/application.js"></script>
 
-</head>
-<body>
-<input type="hidden" id="refresh" value="no">
-<script>
-  var $input = $('#refresh');
-  $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+      <style>
+      body {
+        background-color: black;
+      }
+      </style>
 
+    </head>
 
-</script>
-  <main>
-      <i class="fa fa-book fa-5x" aria-hidden="true"></i> <br>
-      <strong>BOOKi</strong>
-      <h2 class="headline">Place wagers on the latest sporting events</h2>
-      <br>
+    <body>
 
-     <div class="button"><%= link_to 'Credit Card Info', card_index_path %> </div> <br>
+      <input type="hidden" id="refresh" value="no">
+      <script>
+      var $input = $('#refresh');
+      $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+      </script>
 
-  </main>
+      <main>
+        <div class="movenav container">
+          <% if current_user %>
+          <div class="headline auth"> Signed in as <%= current_user.email %> |  <%= link_to "Log Out", session_path, :method => :delete %>
+          </div>
+          <% else %>
+          <div class="headline auth"><%= link_to 'Login',  '/session/new', data: {toggle: "modal", target: "#login-modal"} %> |
+            <a href="#" data-toggle="modal" data-target="#test-modal">Sign Up</a>
+            <!--  <%= link_to 'Sign Up', '/user/new', data: {toggle: "modal", target: "#test-modal"}  %> --> </div>
+            <% end %>
 
+            <% if flash[:danger] %>
+            <div style="color: white;"><%= flash[:danger] %></div>
+            <% end %>
 
+            <%= render 'modal' %>
 
+          </div>
+          <br><br>
 
-<script>
-$.backstretch([
-      "http://8328-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2013/05/golden-state-warriors-playoffs-denver-nuggets.jpg",
-      // "http://wpmedia.news.nationalpost.com/2015/02/462638212.jpg",
-      "http://www.hdwallpapersact.com/wp-content/gallery/cricket-stadium/lovely-sky-view-of-stadium-at-night.jpg",
-      "http://static.nfl.com/static/content/public/pg-photo/2015/07/03/0ap3000000500076/gillette-stadium_pg_600.jpg",
-       "http://ww3.hdnux.com/photos/36/72/01/8101998/3/rawImage.jpg"
-  ], {duration: 2000, fade: 1500});
-</script>
-</body>
-</html>
+          <i class="fa fa-book fa-5x" aria-hidden="true"></i> <br>
+          <strong>BOOKi</strong>
+          <h2 class="headline">Place wagers on the latest sporting events</h2><br>
+
+          <% if current_user  %>
+            <div class="button-container">
+              <div class="button green-button"><%= link_to 'Todays Games', game_index_path %>
+              </div>
+              <div class="button green-button"><%= link_to 'Past Games', game_past_path %>
+              </div>
+              <div class="button green-button"><%= link_to 'Wagers', bet_index_path %>
+              </div>
+              <div class="button green-button"><%= link_to 'Requests', request_index_path %>
+              </div>
+              <br><br>
+            </div>
+          <% end %>
+       </main>
+
+       <script>
+       $.backstretch([
+        "http://8328-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/2013/05/golden-state-warriors-playoffs-denver-nuggets.jpg",
+          // "http://wpmedia.news.nationalpost.com/2015/02/462638212.jpg",
+          "http://www.hdwallpapersact.com/wp-content/gallery/cricket-stadium/lovely-sky-view-of-stadium-at-night.jpg",
+          "http://static.nfl.com/static/content/public/pg-photo/2015/07/03/0ap3000000500076/gillette-stadium_pg_600.jpg",
+          "http://ww3.hdnux.com/photos/36/72/01/8101998/3/rawImage.jpg"
+          ], {duration: 2000, fade: 1500});
+       </script>
+
+     </body>
+     </html>

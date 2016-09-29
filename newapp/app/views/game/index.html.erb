@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/application.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        color: #FFFFFF;
+        background: #36465D;
+        font-family: 'Raleway', sans-serif;
+    }
+ </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+
+      <ul class="list nav navbar-nav">
+        <li><%= link_to 'Home', root_path %> </li>
+        <li><a href="/logout">Logout</a></li>
+        <li><%= link_to 'Games', game_index_path %></li>
+        <li><%= link_to 'My Requests', request_index_path %></li>
+      </ul>
+
+      </div>
+    </nav>
+
+    <h1 style="margin-top: 90px; text-align: center;">Today's Games</h1>
+    <% @current_games.each do |game|%>
+        <% home_team = game.home_team %>
+        <% away_team = game.away_team %>
+        <p></p>
+
+        <div class="row-fluid teamback">
+            <div class="gamepics col-md-4">
+              <img src=<%= away_team.logo_url%> alt="" width="239px" height="200px">
+            </div>
+
+            <div class="gamepics col-md-4">
+             <h2> <%=link_to game.full_name, game_path(game)  %> </h2>
+            </div>
+
+            <div class="gamepics col-md-4">
+              <img src=<%= home_team.logo_url%> alt="" width="239px" height="200px">
+            </div>
+        </div>
+    <%end%>
+
+
+  <script src="js/game.js"></script>
+</body>
+</html>

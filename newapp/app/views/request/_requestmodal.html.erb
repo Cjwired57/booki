@@ -1,0 +1,30 @@
+  <!-- lotsa modal stuff here -->
+<div class="modal fade" id="request-modal" data-modal-index="1">
+  <div class="modal-dialog">
+	<div class="modal-content">
+
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		<h4 class="modal-title">Place Bet Request</h4>
+	  </div>
+
+	  <div class="modal-body">
+	   <%= form_for :request, url: '/request', method: 'post', :html => {:id => "new-request-form"} do |f| %>
+		  Amount in USD: <%= f.text_field :amount %> <br>
+		  Opponent's Email: <%= f.text_field :opponent %> <br> <br>
+		  Select Team: <%= f.radio_button :team_choice, 'home_team', checked: true %>
+		  <%= :team_choice_home_team, "Home Team (#{@game.home_team.name})" %>
+		  <%= f.radio_button :team_choice, 'away_team'%>
+		  <%= :team_choice_away_team, 'Away Team (#{@game.away_team.name})' %>
+
+		  <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#test-modal-2">Send</button>
+		<% end %>
+	  </div>
+
+	  <div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	  </div>
+
+	</div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

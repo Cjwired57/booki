@@ -1,9 +1,24 @@
 Rails.application.routes.draw do
-  get 'card/index'
+  # get 'card/index'
   get 'home/teams'
   get 'home/index'
 
+
+  get '/game/past' => 'game#past'
+  # get '/login' => 'sessions#new'
+  # post '/login' => 'sessions#create'
+  # get '/logout' => 'sessions#destroy'
+  delete 'session' => 'session#destroy'
+
+  resources :request
+  resources :game
+  resources :session
+  resources :user
   resources :card
+  resources :debit
+  resources :request
+  resources :team
+  resources :bet
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

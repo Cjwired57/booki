@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+gem 'stattleship-ruby'
+gem 'bcrypt'
 gem 'stripe'
+gem 'whenever'
+gem 'dotenv-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
@@ -35,6 +39,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rails'
+  gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'rspec-rails'
+  gem 'faker'
+  gem 'factory_girl_rails'
+  gem 'shoulda'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+  gem 'database_cleaner'
+  gem 'rack_session_access'
 end
 
 group :development do

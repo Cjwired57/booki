@@ -24,11 +24,11 @@ body {
 
   <ul class="list nav navbar-nav">
 
-      <li><a href="indexweb.html">Home</a></li>
+    <li><%= link_to 'Home', root_path %> </li>
 
 
     <li><a href="/logout">Logout</a></li>
-      <li><a href="/teams.html">Teams</a></li>
+       <li><%= link_to 'Teams', home_teams_path %></li>
   </ul>
   </div>
 </nav>

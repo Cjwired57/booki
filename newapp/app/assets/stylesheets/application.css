@@ -13,3 +13,45 @@
  *= require_tree .
  *= require_self
  */
+
+.teamback {
+  height: 230px;
+  min-width: 90%;
+  background: #EEEEEE;
+  position: relative;
+  border-radius: 15px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  text-align: center;
+}
+
+.description-wrapper {
+  display: flex;
+  align-items: center;
+
+}
+
+
+.lteam {
+  left: 5%;
+  min-width: 49%;
+  display: inline-block;
+  margin: 0;
+  z-index: 4;
+}
+
+.rteam {
+  min-width: 49%;
+  display: inline-block;
+  right: 5%;
+  margin: 0;
+  z-index: 4;
+}
+
+
+nav {
+
+  background: black;
+}

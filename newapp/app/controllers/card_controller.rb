@@ -1,4 +1,4 @@
-  require "stripe"
+require "stripe"
 
 class CardController < ApplicationController
   Stripe.api_key = "sk_test_LaGOwlDvqeTDlyYRBnWN1y4W"
@@ -7,20 +7,34 @@ class CardController < ApplicationController
   end
 
   def create
-    token = params[:stripeToken]
+    if request.xhr?
+      p params
+      token = params[:token]
+      p token
+      p "****"*50
+      customer = Stripe::Customer.create(
+        source: token,
+        description: 'first example user'
+        )
 
-    customer = Stripe::Customer.create(
-      source: token,
-      description: 'first example user'
-      )
+      @user = current_user
+      @user.customer_id = customer.id
+      @user.save
 
-    @user = User.create(email: 'test@test.com', password_hash: '1234', customer_id: customer.id)
+      p @user
+      p "****"*50
 
-    Stripe::Charge.create(
-      amount: 10000000,
-      currency: 'usd',
-      customer: @user.customer_id)
+      return "cool"
+    else
+
+    # Stripe::Charge.create(
+
+    #   amount: 100,
+    #   currency: 'usd',
+    #   customer: @user.customer_id)
 
     redirect_to root_path
+    end
+
   end
 end
